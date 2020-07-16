@@ -8,7 +8,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:gums="https://web.archive.org/web/20171127035535/http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#"
+     xmlns:gums="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:vann1="http://purl.org/vocab/vann/#"
@@ -19,13 +19,15 @@
         <dc:creator>Ana-Maria Olteanu-Raimond</dc:creator>
         <dc:creator>Cécile Duchêne</dc:creator>
         <dc:creator>Mattia Bunel</dc:creator>
+        <dc:description xml:lang="fr">L’ontologie de relations de localisation (ontologie ORL) est une ontologie d’application dédiée à l’aide de la localisation des victimes en zones de montagne lors d&apos;un appel aux secours. La position de la victime est alors souvent décrite à l&apos;aide de relations que nous appelons &quot;relations de localisation&quot; par rapport à des objets repères, par exemple &quot;Je suis sous le sommet&quot;, &quot;Je vois un lac&quot;. Elle a été définie dans le cadre du projet de recherche ANR CHOUCAS (choucas.ign.fr).  Elle a pour rôle d’identifier et d’organiser les relations de localisation utilisées pour se repérer en montagne. Un certain nombre de relations de localisation décrites dans cette ontologie sont équivalents ou assez proches de concepts décrits dans l&apos;ontologie GUM-3-SPACE de Bateman et al. Ces équivalences ou proximités sont renseignées au mieux.</dc:description>
         <dc:description xml:lang="en">TODO: English abstract</dc:description>
-        <dc:description xml:lang="fr">TODO: Résumé en français</dc:description>
         <dc:issued>2020-02-07</dc:issued>
+        <dc:language xml:lang="fr">Français</dc:language>
+        <dc:language xml:lang="en">French</dc:language>
         <dc:publisher>ANR CHOUCAS</dc:publisher>
         <dc:title xml:lang="en">Location relationships ontology</dc:title>
         <dc:title xml:lang="fr">Ontologie des relations de localisation</dc:title>
-        <dcterms:bibliographicCitation>TODO: Auteur 1, Auteur 2 et Auteur 3, 2020, Ontologie Machin.</dcterms:bibliographicCitation>
+        <dcterms:bibliographicCitation>TODO: Bunel M., Duchêne C. et Raimond A-M., 2020, Ontologie des Relations de Localisation (ORL).</dcterms:bibliographicCitation>
         <dcterms:created>2020-02-07</dcterms:created>
         <vann1:preferredNamespacePrefix>orl</vann1:preferredNamespacePrefix>
         <vann1:preferredNamespaceUri>http://www.purl.org/choucas.ign.fr/orl</vann1:preferredNamespaceUri>
@@ -147,6 +149,12 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:domain rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationDeLocalisation"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#equivalentClass -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#equivalentClass"/>
     
 
 
@@ -452,7 +460,24 @@
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDisjointe"/>
+        <vann:example xml:lang="fr">non, côté Nord (du Pas de la Ville), pardon.</vann:example>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible se situe globalement au nord et est disjointe du site.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Au nord de externe</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
+        <owl:annotatedTarget xml:lang="fr">non, côté Nord (du Pas de la Ville), pardon.</owl:annotatedTarget>
+        <dcterms:source>Grand Veymont 3-1</dcterms:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -636,7 +661,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansLaPartieEstDe"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="gums:EastInternal"/>
-        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
     </owl:Axiom>
     
 
@@ -667,7 +692,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansLaPartieNordDe"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="gums:NorthInternal"/>
-        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
     </owl:Axiom>
     
 
@@ -693,7 +718,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansLaPartieOuestDe"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="gums:WestInternal"/>
-        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
     </owl:Axiom>
     
 
@@ -712,7 +737,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansLaPartieSudDe"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="gums:SouthInternal"/>
-        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
     </owl:Axiom>
     
 
@@ -1129,225 +1154,6 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- gums:East -->
-
-    <owl:NamedIndividual rdf:about="gums:East">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:East"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- gums:EastExternal -->
-
-    <owl:NamedIndividual rdf:about="gums:EastExternal">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:EastExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- gums:North -->
-
-    <owl:NamedIndividual rdf:about="gums:North">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:North"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- gums:NorthExternal -->
-
-    <owl:NamedIndividual rdf:about="gums:NorthExternal">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:NorthExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- gums:South -->
-
-    <owl:NamedIndividual rdf:about="gums:South">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:South"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- gums:SouthExternal -->
-
-    <owl:NamedIndividual rdf:about="gums:SouthExternal">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:SouthExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- gums:West -->
-
-    <owl:NamedIndividual rdf:about="gums:West">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:West"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- gums:WestExternal -->
-
-    <owl:NamedIndividual rdf:about="gums:WestExternal">
-        <owl:sameAs rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:WestExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AEstDe -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:East"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:EastExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AOuestDe -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:West"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:WestExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AuNordDe -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:North"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:NorthExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AuSudDe -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:South"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="gums:SouthExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-Space), SAUF que nous ne considérerons pas que WestInternal est un sous-concept de Disjointness, contrairement à GUM-Space.</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Annotations
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1356,23 +1162,44 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <rdf:Description rdf:about="http://www.purl.org/choucas.ign.fr/orl#AEstDe">
         <rdfs:label xml:lang="fr">À l&apos;est de</rdfs:label>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"/>
         <rdfs:comment xml:lang="fr">La cible se situe globalement à l’est du site, sans
 préciser si elle est à dans la partie est du site ou
 disjointe du site et à l’est de lui.</rdfs:comment>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne">
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"/>
         <rdfs:comment xml:lang="fr">La cible se situe globalement à l’est et est disjointe du site.</rdfs:comment>
         <rdfs:label xml:lang="fr">À l&apos;est de externe</rdfs:label>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.purl.org/choucas.ign.fr/orl#AOuestDe">
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"/>
         <vann:example xml:lang="fr">oui, et là on est à l&apos;Ouest (grande Sure, rochers de Lorzier).</vann:example>
+        <rdfs:label xml:lang="fr">À l&apos;ouest de</rdfs:label>
         <rdfs:comment xml:lang="fr">La cible se situe globalement à l’ouest du site, sans
 préciser si elle est à dans la partie ouest du site ou
 disjointe du site et à son ouest.</rdfs:comment>
-        <rdfs:label xml:lang="fr">À l&apos;ouest de</rdfs:label>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
@@ -1380,11 +1207,18 @@ disjointe du site et à son ouest.</rdfs:comment>
         <dcterms:source>Grande Sure 4-1</dcterms:source>
     </owl:Axiom>
     <rdf:Description rdf:about="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne">
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"/>
         <rdfs:comment xml:lang="fr">La cible se situe globalement à l’ouest et est disjointe du site.</rdfs:comment>
         <vann:example xml:lang="fr">[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
         <rdfs:label xml:lang="fr">À l&apos;ouest de externe</rdfs:label>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
@@ -1397,18 +1231,13 @@ disjointe du site et à son ouest.</rdfs:comment>
 préciser si elle est à dans la partie norddu site ou
 disjointe du site et à son nord.</rdfs:comment>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne">
-        <vann:example xml:lang="fr">non, côté Nord (du Pas de la Ville), pardon.</vann:example>
-        <rdfs:comment xml:lang="fr">La cible se situe globalement au nord et est disjointe du site.</rdfs:comment>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:label xml:lang="fr">Au nord de externe</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North"/>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
-        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
-        <owl:annotatedTarget xml:lang="fr">non, côté Nord (du Pas de la Ville), pardon.</owl:annotatedTarget>
-        <dcterms:source>Grand Veymont 3-1</dcterms:source>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
     </owl:Axiom>
     <rdf:Description rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuSudDe">
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
@@ -1416,13 +1245,27 @@ disjointe du site et à son nord.</rdfs:comment>
 préciser si elle est à dans la partie sud du site ou
 disjointe du site et à son sud.</rdfs:comment>
         <rdfs:label xml:lang="fr">Au sud de</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South"/>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne">
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <owl:equivalentClass rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"/>
         <rdfs:label xml:lang="fr">Au sud de externe</rdfs:label>
-        <rdfs:comment xml:lang="fr">La cible se situe globalement au sud et est disjointe du site.</rdfs:comment>
         <vann:example xml:lang="fr">je suis entre le grand veymont (sous le grand veymont) et Pas de la Ville, tout à fait, coté sud.</vann:example>
+        <rdfs:comment xml:lang="fr">La cible se situe globalement au sud et est disjointe du site.</rdfs:comment>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
@@ -1433,5 +1276,5 @@ disjointe du site et à son sud.</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
