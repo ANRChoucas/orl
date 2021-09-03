@@ -20,11 +20,13 @@
         <dc:creator>Cécile Duchêne</dc:creator>
         <dc:creator>Mattia Bunel</dc:creator>
         <dc:description xml:lang="fr">L’ontologie de relations de localisation (ontologie ORL) est une ontologie d’application dédiée à l’aide de la localisation des victimes en zones de montagne lors d&apos;un appel aux secours. La position de la victime est alors souvent décrite à l&apos;aide de relations que nous appelons &quot;relations de localisation&quot; par rapport à des objets repères, par exemple &quot;Je suis sous le sommet&quot;, &quot;Je vois un lac&quot;. Elle a été définie dans le cadre du projet de recherche ANR CHOUCAS (choucas.ign.fr).  Elle a pour rôle d’identifier et d’organiser les relations de localisation utilisées pour se repérer en montagne. Un certain nombre de relations de localisation décrites dans cette ontologie sont équivalents ou assez proches de concepts décrits dans l&apos;ontologie GUM-3-SPACE de Bateman et al. Ces équivalences ou proximités sont renseignées au mieux à l&apos;aide de propriétés equivalentClass et seeAlso sur les concepts.</dc:description>
-        <dc:description xml:lang="en">The Location relationships ontology (ORL ontology) is an application ontology dedicated to locating victims in mountainous zones during a phone call with rescue services. In such circumstances, the location of the victim is often described by means of relations we call &quot;location relations&quot; with landmark objects, for instance &quot;I am below the summit&quot;, &quot;I see a lake&quot;. The ORL ontology was defined in the context of the research project CHOUCAS, funded by the French National Research Agency (choucas.ign.fr). Its purpose is to identify and organise location relations used to get ones bearings in mountainous areas. A number of location relations described in this ontology are equivalent or close to concepts described in the GUM-3-SPACE ontology by Bateman et al. This equivalences and proximities are reported as much as possible by means equivalentClass and seeAlso properties on the concepts. The ORL ontology is in French only at this time.</dc:description>
-        <dc:issued>2020-07-16</dc:issued>
+        <dc:description xml:lang="en">The Locatiing relationships ontology (ORL ontology) is an application ontology dedicated to locating victims in mountainous zones during a phone call with rescue services. In such circumstances, the location of the victim is often described by means of relations we call &quot;locating relations&quot; with landmark objects, for instance &quot;I am below the summit&quot;, &quot;I see a lake&quot;. The ORL ontology was defined in the context of the research project CHOUCAS, funded by the French National Research Agency (choucas.ign.fr). Its purpose is to identify and organise locating relations used to get ones bearings in mountainous areas. A number of locating relations described in this ontology are equivalent or close to concepts described in the GUM-3-SPACE ontology by Bateman et al (2010). This equivalences and proximities are reported as much as possible by means equivalentClass and seeAlso properties on the concepts. 
+
+The ORL ontology is in French only at this time.</dc:description>
+        <dc:issued>2020-11-17</dc:issued>
         <dc:language>fr-fr</dc:language>
         <dc:publisher>ANR CHOUCAS</dc:publisher>
-        <dc:title xml:lang="en">Location relationships ontology</dc:title>
+        <dc:title xml:lang="en">Locating relationships ontology</dc:title>
         <dc:title xml:lang="fr">Ontologie des relations de localisation</dc:title>
         <dcterms:bibliographicCitation>Bunel M., Duchêne C. et Raimond A-M., 2020, Ontologie des Relations de Localisation (ORL).</dcterms:bibliographicCitation>
         <dcterms:created>2020-02-07</dcterms:created>
@@ -33,7 +35,7 @@
         <rdfs:seeAlso rdf:resource="http://purl.org/oac"/>
         <rdfs:seeAlso rdf:resource="http://purl.org/choucas.ign.fr/oor"/>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl"/>
-        <owl:versionInfo xml:lang="fr">1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="fr">1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -171,18 +173,151 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativeRelative -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativeRelative">
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDe"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDe"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDeExterne"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDe"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDe"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal -->
+
+    <owl:Class rdf:about="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDeExterne"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativePlanimetriqueDe -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativePlanimetriqueDe">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
+        <vann:example xml:lang="fr">j&apos;estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d&apos;oiseau</vann:example>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible est à telle distance du site, exprimée dans une unité de longueur (pas un temps de marche/accès). La distance considérée est planimétrique. Si relief en pente « pas trop forte », ça peut être le long de la pente, mais il ne s’agit pas d’un dénivelé.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À distance quantitative planimétrique de</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#QuantitativeDistance"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativePlanimetriqueDe"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
+        <owl:annotatedTarget xml:lang="fr">j&apos;estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d&apos;oiseau</owl:annotatedTarget>
+        <dcterms:source>Grand Veymont 8-1</dcterms:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativeRelativeDe -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativeRelativeDe">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
         <vann:example xml:lang="fr">et lui est à une longueur en-dessous (du dos d&apos;âne), donc à une petite longueur du haut du couloir de la Meije</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
         <rdfs:comment xml:lang="fr">La cible est située à une certaine distance du site. Cette distance est quantitative et est exprimée par une métrique dépendant du site (eg. À un pâté de maisons). Il n’y a pas de contrainte sur la dimension de la distance, elle peut être planimétrique, altimétrique ou les deux .</rdfs:comment>
-        <rdfs:label xml:lang="fr">À distance qualitative relative</rdfs:label>
+        <rdfs:label xml:lang="fr">À distance quantitative relative de</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativeRelative"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ADistanceQuantitativeRelativeDe"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">et lui est à une longueur en-dessous (du dos d&apos;âne), donc à une petite longueur du haut du couloir de la Meije</owl:annotatedTarget>
         <dcterms:source>Meije 17 juin 3-1</dcterms:source>
@@ -190,13 +325,33 @@
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#ADistanceTemps -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsDe -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ADistanceTemps">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsDe">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est à une certaine distance du site. Cette distance est exprimée en temps de parcours. Il est par conséquent nécessaire de connaître le mode de déplacement ou la vitesse de déplacement.</rdfs:comment>
-        <rdfs:label xml:lang="fr">À distance temps</rdfs:label>
+        <rdfs:comment xml:lang="fr">La cible est à une certaine distance du site. Cette distance est exprimée en temps de parcours. Il est par conséquent nécessaire de connaître le mode de déplacement ou la vitesse de déplacement. La direction du déplacement n&apos;est pas précisée.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À distance temps de</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsDepuis -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsDepuis">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsDe"/>
+        <rdfs:comment xml:lang="fr">La cible est à une certaine distance du site. Cette distance est exprimée en temps de parcours. Il est par conséquent nécessaire de connaître le mode de déplacement ou la vitesse de déplacement. Le déplacement se fait depuis le site vers la cible.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À distance temps depuis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsVers -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsVers">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsDe"/>
+        <rdfs:comment xml:lang="fr">La cible est à une certaine distance du site. Cette distance est exprimée en temps de parcours. Il est par conséquent nécessaire de connaître le mode de déplacement ou la vitesse de déplacement. Le déplacement se fait depuis la cible vers le site.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À distance temps vers</rdfs:label>
     </owl:Class>
     
 
@@ -219,62 +374,6 @@
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AEstDe -->
-
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AEstDe">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeCardinalité"/>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’est du site, sans
-préciser si elle est à dans la partie est du site ou
-disjointe du site et à l’est de lui.</rdfs:comment>
-        <rdfs:label xml:lang="fr">À l&apos;est de</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne -->
-
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDisjointe"/>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’est et est disjointe du site.</rdfs:comment>
-        <rdfs:label xml:lang="fr">À l&apos;est de externe</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AExtremiteDe -->
-
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AExtremiteDe">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeContact"/>
-        <vann:example xml:lang="fr">Il est à l&apos;extrémité ouest d&apos;une espèce de terrasse en béton.</vann:example>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est située à l&apos;extrémité du site. Ce qui impose une relation de contenance.</rdfs:comment>
-        <rdfs:label xml:lang="fr">À l&apos;extrémité de</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Peripheral"/>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AExtremiteDe"/>
-        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
-        <owl:annotatedTarget xml:lang="fr">Il est à l&apos;extrémité ouest d&apos;une espèce de terrasse en béton.</owl:annotatedTarget>
-        <dcterms:source>Malaise bastille 4-2</dcterms:source>
-    </owl:Axiom>
-    
-
-
     <!-- http://www.purl.org/choucas.ign.fr/orl#AGaucheDe -->
 
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AGaucheDe">
@@ -293,13 +392,121 @@ disjointe du site et à l’est de lui.</rdfs:comment>
     
 
 
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ALEstDe -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ALEstDe">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeCardinalité"/>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’est du site, sans
+préciser si elle est à dans la partie est du site ou
+disjointe du site et à l’est de lui.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À l&apos;est de</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDe"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ALEstDeExterne -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ALEstDeExterne">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDe"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDisjointe"/>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’est et est disjointe du site.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À l&apos;est de externe</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ALExtremiteDe -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ALExtremiteDe">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeContact"/>
+        <vann:example xml:lang="fr">Il est à l&apos;extrémité ouest d&apos;une espèce de terrasse en béton.</vann:example>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">Le site est de forme allongée (il a alors deux extrémités), ou possède une ou plusieurs parties saillantes allongées (il peut alors avoir plusieurs extrémités).  La cible est située au niveau (ProcheDe) l&apos;une de ces extrémités. Elle peut être située à l&apos;intérieur du site, ou non.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À l&apos;extrémité de</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Peripheral"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALExtremiteDe"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
+        <owl:annotatedTarget xml:lang="fr">Il est à l&apos;extrémité ouest d&apos;une espèce de terrasse en béton.</owl:annotatedTarget>
+        <dcterms:source>Malaise bastille 4-2</dcterms:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ALOuestDe -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ALOuestDe">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeCardinalité"/>
+        <vann:example xml:lang="fr">oui, et là on est à l&apos;Ouest (grande Sure, rochers de Lorzier).</vann:example>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’ouest du site, sans
+préciser si elle est à dans la partie ouest du site ou
+disjointe du site et à son ouest.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À l&apos;ouest de</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDe"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
+        <owl:annotatedTarget xml:lang="fr">oui, et là on est à l&apos;Ouest (grande Sure, rochers de Lorzier).</owl:annotatedTarget>
+        <dcterms:source>Grande Sure 4-1</dcterms:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDe"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ALOuestDeExterne -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ALOuestDeExterne">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDe"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDisjointe"/>
+        <vann:example xml:lang="fr">[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur</vann:example>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’ouest et est disjointe du site.</rdfs:comment>
+        <rdfs:label xml:lang="fr">À l&apos;ouest de externe</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDeExterne"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
+        <owl:annotatedTarget xml:lang="fr">[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur</owl:annotatedTarget>
+        <dcterms:source>Cornafion 7-1</dcterms:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
     <!-- http://www.purl.org/choucas.ign.fr/orl#ALaFrontiereDe -->
 
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ALaFrontiereDe">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeContact"/>
         <vann:example xml:lang="fr">Je suis un peu à la sortie de la forêt.</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">Le site a une emprise spatiale linéaire ou surfacique. La cible est située « proche » de ses frontières. La cible peut indifféremment se situer à l’intérieur (DansPlanimétrique) du site, ou pas. Si elle est à l’intérieur, elle est alors dans le complémentaire de la zone de l’espace qui vérifier la relation AuMilieuDe (mais ALaFrontiereDe et AuMilieuDe ne couvrent pas nécessairement tout le site à eux deux). Très probablement, la distance à considérer par rapport aux frontières dépend de la nature du site et/ou de sa taille.</rdfs:comment>
+        <rdfs:comment rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Peripheral"/>
+        <rdfs:comment xml:lang="fr">Le site a une emprise spatiale linéaire ou surfacique. La cible est située « proche » de ses frontières. La cible peut indifféremment se situer à l’intérieur (DansPlanimétrique) du site, ou à l&apos;extérieur (HordDePlanimetrique) ou ni l&apos;un ni l&apos;autre (&quot;vraiment sur la frontière&quot;). Si elle est à l’intérieur, elle est alors dans le complémentaire de la zone de l’espace qui vérifier la relation AuMilieuDe (mais ALaFrontiereDe et AuMilieuDe ne couvrent pas nécessairement tout le site à eux deux). Très probablement, la distance à considérer par rapport aux frontières dépend de la nature du site et/ou de sa taille.</rdfs:comment>
         <rdfs:label xml:lang="fr">À la frontière de</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -336,72 +543,41 @@ disjointe du site et à l’est de lui.</rdfs:comment>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AOuestDe -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheDe -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AOuestDe">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeCardinalité"/>
-        <vann:example xml:lang="fr">oui, et là on est à l&apos;Ouest (grande Sure, rochers de Lorzier).</vann:example>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’ouest du site, sans
-préciser si elle est à dans la partie ouest du site ou
-disjointe du site et à son ouest.</rdfs:comment>
-        <rdfs:label xml:lang="fr">À l&apos;ouest de</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
-        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
-        <owl:annotatedTarget xml:lang="fr">oui, et là on est à l&apos;Ouest (grande Sure, rochers de Lorzier).</owl:annotatedTarget>
-        <dcterms:source>Grande Sure 4-1</dcterms:source>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne -->
-
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDisjointe"/>
-        <vann:example xml:lang="fr">[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur</vann:example>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe globalement à l’ouest et est disjointe du site.</rdfs:comment>
-        <rdfs:label xml:lang="fr">À l&apos;ouest de externe</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDeExterne"/>
-        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
-        <owl:annotatedTarget xml:lang="fr">[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur</owl:annotatedTarget>
-        <dcterms:source>Cornafion 7-1</dcterms:source>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarche -->
-
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarche">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ADistanceTemps"/>
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheDe">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ADistanceTempsDe"/>
         <vann:example xml:lang="fr">on est à 10 minutes du sommet de la Bastille</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est à tel temps de marche du site, en marchant depuis le site vers la cible. (temps de marche en propriété de la relation).</rdfs:comment>
-        <rdfs:label xml:lang="fr">À temps de marche</rdfs:label>
+        <rdfs:comment xml:lang="fr">La cible est à tel temps de marche du site, en marchant, sans préciser si la marche se fait depuis ou vers le site. (temps de marche en propriété de la relation).</rdfs:comment>
+        <rdfs:label xml:lang="fr">À temps de marche de</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarche"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheDe"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">on est à 10 minutes du sommet de la Bastille</owl:annotatedTarget>
         <dcterms:source>Malaise Bastille 1-1</dcterms:source>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheDepuis -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheDepuis">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheDe"/>
+        <rdfs:comment>La cible est à tel temps de marche du site, en marchant depuis le site vers la cible. (temps de marche en propriété de la relation).</rdfs:comment>
+        <rdfs:label xml:lang="fr">À temps de marche depuis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheVers -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheVers">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ATempsDeMarcheDe"/>
+        <rdfs:comment xml:lang="fr">La cible est à tel temps de marche du site, en marchant vers le site depuis la cible. (temps de marche en propriété de la relation).</rdfs:comment>
+        <rdfs:label xml:lang="fr">À temps de marche vers</rdfs:label>
+    </owl:Class>
     
 
 
@@ -411,7 +587,7 @@ disjointe du site et à son ouest.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeItinéraire"/>
         <vann:example xml:lang="fr">après le parking de la Villette.</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et après le site qui est un jalon de cet itinéraire. Cela suppose d’avoir défini un référentiel des directions associé à l’itinéraire. Ce référentiel est souvent lié au sens de progression sur l’itinéraire (l’avant est vers la destination, l’arrière vers l’origine).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et après le site qui est un jalon de cet itinéraire. Cela suppose d’avoir défini un référentiel des directions associé à l’itinéraire. Ce référentiel est souvent lié au sens de progression sur l’itinéraire (&quot;l’après&quot; est vers la destination, &quot;l’avant&quot; vers l’origine).</rdfs:comment>
         <rdfs:label xml:lang="fr">Après un jalon sur itinéraire</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -428,29 +604,31 @@ disjointe du site et à son ouest.</rdfs:comment>
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuDessusALAplombDe">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeVerticale"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:label xml:lang="fr">Au dessus à l&apos;aplomb de</rdfs:label>
+        <rdfs:comment xml:lang="fr">La cible est à une altitude supérieure à celle du site et le site est plus ou moins situé sur la ligne de plus grande pente qui passe par la cible, ou inversement . Typiquement, site et cible appartiennent à une même vallée (ce qui pose un problème de niveau de granularité) et sont situés à peu près au même niveau longitudinalement.
+NB : il n&apos;est pas facile de calculer la ligne de plus grande pente passant par la cible sans connaître la localisation de la cible, alors que par définition la localisation de la cible n&apos;est pas forcément connue... Pourtant, si le site est en fond de vallée c’est bien le site qui est situé sur la ligne de plus grande pente passant par la cible, et non l’inverse.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Au-dessus à l&apos;aplomb de</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AuDessusAltitude -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#AuDessusDeAltitude -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuDessusAltitude">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuDessusDeAltitude">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeVerticale"/>
         <vann:example xml:lang="fr">Au-dessus de Percolin, y’a la cabane du berger de Bellefont et on est 50 mètres au-dessus</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
         <rdfs:comment xml:lang="fr">La cible a une altitude supérieure à celle du site. La distance entre le site est la cible n’est pas contraignante.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Au dessus altitude</rdfs:label>
+        <rdfs:label xml:lang="fr">Au-dessus de altitude</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjection"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusAltitude"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusDeAltitude"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">Au-dessus de Percolin, y’a la cabane du berger de Bellefont et on est 50 mètres au-dessus</owl:annotatedTarget>
         <dcterms:source>Col de Bellefond 3-1</dcterms:source>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusAltitude"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusDeAltitude"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjection"/>
         <rdfs:comment xml:lang="fr">Le concept AuDessusAltitude n’impose pas que la cible soit située à l’intérieur ou à l’extérieur du site, par conséquent le concept le plus proche dans l’ontologie de Bateman et le AboveProjection. Pas certain pourtant que les deux concepts soient parfaitement équivalents.</rdfs:comment>
@@ -458,43 +636,53 @@ disjointe du site et à son ouest.</rdfs:comment>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AuDessusJalonSurItineraire -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#AuDessusDeJalonSurItineraire -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuDessusJalonSurItineraire">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuDessusDeJalonSurItineraire">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeItinéraire"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeVerticale"/>
-        <vann:example xml:lang="fr">...sur le sentier qui mène à la cascade de l’oursière, haut dessus de la cascade de l’oursière</vann:example>
+        <vann:example xml:lang="fr">...sur le sentier qui mène à la cascade de l’oursière, au-dessus de la cascade de l’oursière</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est au dessus du site et sur un chemin menant au site</rdfs:comment>
-        <rdfs:label xml:lang="fr">Au dessus d&apos;un jalon sur un chemin</rdfs:label>
+        <rdfs:comment xml:lang="fr">La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et au-dessus (au sens de l&apos;altitude) du site qui est un jalon de cet itinéraire.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Au-dessus d&apos;un jalon sur un itinéraire</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjectionExternal"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusJalonSurItineraire"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusDeJalonSurItineraire"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
-        <owl:annotatedTarget xml:lang="fr">...sur le sentier qui mène à la cascade de l’oursière, haut dessus de la cascade de l’oursière</owl:annotatedTarget>
-        <dcterms:source>Cascade de l&apos;ourisère 1-3</dcterms:source>
+        <owl:annotatedTarget xml:lang="fr">...sur le sentier qui mène à la cascade de l’oursière, au-dessus de la cascade de l’oursière</owl:annotatedTarget>
+        <dcterms:source>Cascade de l&apos;oursière 1-3</dcterms:source>
     </owl:Axiom>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AuDessusProche -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#AuDessusProcheDe -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuDessusProche">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuDessusProcheDe">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeVerticale"/>
         <vann:example xml:lang="fr">juste au-dessus de Bernin</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
         <rdfs:comment xml:lang="fr">La cible est proche et a une altitude supérieure à celle du site.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Au dessus et proche de</rdfs:label>
+        <rdfs:label xml:lang="fr">Au-dessus et proche de</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjectionExternal"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusProche"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuDessusProcheDe"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">juste au-dessus de Bernin</owl:annotatedTarget>
         <dcterms:source>Saint Pancrasse 4-1</dcterms:source>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#AuMilieuDe -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AuMilieuDe">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeContact"/>
+        <rdfs:comment xml:lang="fr">Le site a une emprise spatiale linéaire ou surfacique. La cible est située à l’intérieur du site (DansPlanimetrique), suffisamment loin de ses frontières pour qu’on ne puisse pas considérer qu’elle en est au bord. Très probablement, la distance à considérer par rapport aux frontières dépend de la nature du site et/ou de sa taille.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Au milieu de</rdfs:label>
+    </owl:Class>
     
 
 
@@ -528,16 +716,16 @@ disjointe du site et à son nord.</rdfs:comment>
         <rdfs:label xml:lang="fr">Au nord de externe</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">non, côté Nord (du Pas de la Ville), pardon.</owl:annotatedTarget>
         <dcterms:source>Grand Veymont 3-1</dcterms:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
     </owl:Axiom>
     
 
@@ -572,16 +760,16 @@ disjointe du site et à son sud.</rdfs:comment>
         <rdfs:label xml:lang="fr">Au sud de externe</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
-        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">je suis entre le grand veymont (sous le grand veymont) et Pas de la Ville, tout à fait, coté sud.</owl:annotatedTarget>
         <dcterms:source>Grand Veymont 2-3</dcterms:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDeExterne"/>
+        <rdfs:comment>Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c&apos;est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c&apos;est sans doute une erreur dans GUM-3-SPACE).</rdfs:comment>
     </owl:Axiom>
     
 
@@ -592,7 +780,7 @@ disjointe du site et à son sud.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
         <vann:example xml:lang="fr">dans le massif de la chartreuse</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est suffisamment proche du site pour qu’on puisse considérer que le site reste un point de repère qui a un sens. La proximité qui pourrait s’en déduire est généralement dépendante d’un « rayonnement » qui pourrait êtrre affecté au site (lié à sa renommée, à sa taille typiquemnet pour un lieu habité, à sa saillance...). Il peut y avoir connexion topologique entre la cible et le site, ou pas. Exemple : « je suis dans le coin du mont-Blanc ».</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible est suffisamment proche du site pour qu’on puisse considérer que le site reste un point de repère qui a un sens, mais potentiellement suffisamment loin pour qu&apos;on ne puisse pas considérer qu&apos;on est nécessairement dans le cas Proximal ou PresDe. La proximité qui pourrait s’en déduire est généralement dépendante d’un « rayonnement » qui pourrait êtrre affecté au site (lié à sa renommée, à sa taille typiquemnet pour un lieu habité, à sa saillance...). Il peut y avoir connexion topologique entre la cible et le site, ou pas. Exemple : « je suis dans le coin du mont-Blanc ».</rdfs:comment>
         <rdfs:label xml:lang="fr">Aux alentours de</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal"/>
     </owl:Class>
@@ -619,7 +807,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AvantJalonSurItineraire">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeItinéraire"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et avant le site qui est un jalon de cet itinéraire. Cela suppose d’avoir défini un référentiel des directions associé à l’itinéraire. Ce référentiel est souvent lié au sens de progression sur l’itinéraire (l’avant est vers la destination, l’arrière vers l’origine).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et avant le site qui est un jalon de cet itinéraire. Cela suppose d’avoir défini un référentiel des directions associé à l’itinéraire. Ce référentiel est souvent lié au sens de progression sur l’itinéraire (&quot;l’après&quot; est vers la destination, &quot;l’avant&quot; vers l’origine).</rdfs:comment>
         <rdfs:label xml:lang="fr">Avant un jalon sur itinéraire</rdfs:label>
     </owl:Class>
     
@@ -647,28 +835,28 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AvoirDerriereSoit -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#AvoirDerriereSoi -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AvoirDerriereSoit">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AvoirDerriereSoi">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeDirection"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
         <rdfs:comment xml:lang="fr">La cible est munie d’un référentiel des directions intrinsèque : elle a un avant et un arrière, (et une gauche, une droite), par exemple parce que c’est un être animé muni d’un visage. Dans ce référentiel des directions, et plus précisément sur l’axe avant-arrière de ce référentiel, le site est situé derrière la cible (donc la cible a le site derrière elle, au sens commun de l’expression). Le référentiel des directions doit être modélisé explicitement (à préciser : comment)...</rdfs:comment>
-        <rdfs:label xml:lang="fr">Avoir derrière soit</rdfs:label>
+        <rdfs:label xml:lang="fr">Avoir derrière soi</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#AvoirDevantSoit -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#AvoirDevantSoi -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AvoirDevantSoit">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#AvoirDevantSoi">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeDirection"/>
         <vann:example xml:lang="fr">devant moi j’ai la plaine, et à gauche j’ai quand même des sapins.</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
         <rdfs:comment xml:lang="fr">La cible est munie d’un référentiel des directions intrinsèque : elle a un avant et un arrière, (et une gauche, une droite), par exemple parce que c’est un être animé muni d’un visage. Dans ce référentiel des directions, et plus précisément sur l’axe avant-arrière de ce référentiel, le site est situé devant la cible (donc la cible a le site devant elle, au sens commun de l’expression). Le référentiel des directions doit être modélisé explicitement (à préciser : comment)...</rdfs:comment>
-        <rdfs:label xml:lang="fr">Avoir devant soit</rdfs:label>
+        <rdfs:label xml:lang="fr">Avoir devant soi</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AvoirDevantSoit"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AvoirDevantSoi"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">devant moi j’ai la plaine, et à gauche j’ai quand même des sapins.</owl:annotatedTarget>
         <dcterms:source>Moucherotte 27-1</dcterms:source>
@@ -694,12 +882,13 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#DansLaDirectionDe -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#DansLaDirectionDeXDepuisYEspaceIsotrope -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DansLaDirectionDe">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeDirection"/>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:label xml:lang="fr">Dans la direction de</rdfs:label>
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DansLaDirectionDeXDepuisYEspaceIsotrope">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeCardinalité"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeTernaire"/>
+        <rdfs:comment xml:lang="fr">Cette relation de localisation nécessite deux sites: X qui fixe la direction générale (dans un environnement supposé isotrope, c&apos;est-à-dire sans réseau support) et Y qui donne le point d&apos;origine de cette direction. Ici on considère donc que la cible est située &quot;globalement&quot; dans la direction de Y depuis X. Cette relation généralise les relations de cardinalité classiques (ex. AuNordDe, ALOuestDe…)</rdfs:comment>
+        <rdfs:label xml:lang="fr">Dans la direction de X depuis Y en espace isotrope</rdfs:label>
     </owl:Class>
     
 
@@ -738,10 +927,10 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <!-- http://www.purl.org/choucas.ign.fr/orl#DansLaPartieEstDe -->
 
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DansLaPartieEstDe">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AEstDe"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALEstDe"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansPlanimetrique"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans se partie est.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans sa partie est. La « partie est » du site est à définir, par exemple comme la partie à l’est d’une ligne Nord-Sud coupant le site en son milieu.</rdfs:comment>
         <rdfs:label xml:lang="fr">Dans la partie est de</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastInternal"/>
     </owl:Class>
@@ -772,7 +961,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuNordDe"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansPlanimetrique"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans se partie nord.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans sa partie nord. La « partie nord » du site est à définir, par exemple comme la partie au nord d’une ligne Est-Ouest coupant le site en son milieu.</rdfs:comment>
         <rdfs:label xml:lang="fr">Dans la partie nord de</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthInternal"/>
     </owl:Class>
@@ -788,11 +977,11 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <!-- http://www.purl.org/choucas.ign.fr/orl#DansLaPartieOuestDe -->
 
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DansLaPartieOuestDe">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AOuestDe"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#ALOuestDe"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansPlanimetrique"/>
         <vann:example xml:lang="fr">il est à l&apos;extrémité ouest d&apos;une espèce de terrasse en béton.</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans se partie ouest.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans sa partie ouest. La « partie ouest » du site est à définir, par exemple comme la partie à l&apos;ouest d’une ligne Nord-Sud coupant le site en son milieu.</rdfs:comment>
         <rdfs:label xml:lang="fr">Dans la partie ouest de</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestInternal"/>
     </owl:Class>
@@ -817,7 +1006,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#AuSudDe"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DansPlanimetrique"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans se partie sud.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible se situe dans le site et dans sa partie sud. La « partie sud » du site est à définir, par exemple comme la partie au sud d’une ligne Est-Ouest coupant le site en son milieu.</rdfs:comment>
         <rdfs:label xml:lang="fr">Dans la partie sud de</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthInternal"/>
     </owl:Class>
@@ -836,6 +1025,9 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeContact"/>
         <vann:example xml:lang="fr">non, on est en forêt.</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible est située dans l’espace 2,5 D délimité par le site, qui est
+donc considéré comme délimitant une région sur la surface terrestre.
+DansPlanimetrique est mutuellement exclusif avec HorsDePlanimetrique, mais n&apos;en est pas le complémentaire (cf. ALaFrontiereDe, qui est compatible avec HorsDePlanimetrique, avec DansPlanimetrique, ou avec une situation ou ni l&apos;un ni l&apos;autre ne s&apos;applique).</rdfs:comment>
         <rdfs:label xml:lang="fr">Dans planimétrique</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -847,24 +1039,24 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeParRapportA -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeXParRapportAY -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeParRapportA">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeXParRapportAY">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeTernaire"/>
         <vann:example xml:lang="fr">Les rochers de l’homme, vous descendiez de l’autre côté plutôt ?</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est de l’autre côté du site 1 par rapport au site 2. Autrement dit, la cible et le site 2 sont de part et d’autre du site 1. C’est une situation opposée à DuMemeCoteQueParRapportA, où la cible et le site1 sont situés du même côté du site 2. Comme pour DuMemeCoteQueParRapportA, cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site 1. Selon la forme et la nature du site 1 (et son contexte spatial) : soit le site le site 1 a intrinsèquement deux côtés (un col, une crête, une rivière, une ville située sur une rivière)... Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site 1, site 2) qui permet de définir deux côtés au site 1 : un côté qui contient le site 1, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant le site 1 au site 2, passant par le site 1.</rdfs:comment>
-        <rdfs:label xml:lang="fr">De l&apos;autre côté de par rapport à</rdfs:label>
+        <rdfs:comment xml:lang="fr">La cible est de l’autre côté du site X par rapport au site Y. Autrement dit, la cible et le site Y sont de part et d’autre du site X. Cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site X (comme pour DuMemeCoteQueXParRapportAY le suppose pour le site Y). Selon la forme et la nature du site X (et son contexte spatial) : soit le site le site X a intrinsèquement deux côtés (un col, une crête, une rivière, une ville située sur une rivière)... Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site X, site Y) qui permet de définir deux côtés au site X : un côté qui contient le site Y, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant le site X au site Y, passant par le site X.</rdfs:comment>
+        <rdfs:label xml:lang="fr">De l&apos;autre côté de X par rapport à Y</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeParRapportA"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeXParRapportAY"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">Les rochers de l’homme, vous descendiez de l’autre côté plutôt ?</owl:annotatedTarget>
         <dcterms:source>Col de la mine de fer 7-1</dcterms:source>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeParRapportA"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DeAutreCoteDeXParRapportAY"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"/>
         <rdfs:comment xml:lang="fr">RelativeNonProjectionAxial n&apos;est pas défini très clairement dans l’ontologie de Bateman (contradiction entre définition/exemples donnés dans le papier et dans l’ontologie elle-même).</rdfs:comment>
@@ -872,47 +1064,61 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     
 
 
-    <!-- http://www.purl.org/choucas.ign.fr/orl#DistanceQuantitativePlanimetrique -->
+    <!-- http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueXParRapportAY -->
 
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DistanceQuantitativePlanimetrique">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
-        <vann:example xml:lang="fr">j&apos;estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d&apos;oiseau</vann:example>
-        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est à telle distance du site, exprimée dans une unité de longueur (pas un temps de marche/accès). La distance considérée est planimétrique. Si relief en pente « pas trop forte », ça peut être le long de la pente, mais il ne s’agit pas d’un dénivelé.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Distance quantitative planimétrique</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#QuantitativeDistance"/>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DistanceQuantitativePlanimetrique"/>
-        <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
-        <owl:annotatedTarget xml:lang="fr">j&apos;estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d&apos;oiseau</owl:annotatedTarget>
-        <dcterms:source>Grand Veymont 8-1</dcterms:source>
-    </owl:Axiom>
-    
-
-
-    <!-- http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueParRapportA -->
-
-    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueParRapportA">
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueXParRapportAY">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeTernaire"/>
         <vann:example xml:lang="fr">c&apos;est côté lac Robert</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible située du même côté que le site 1, par rapport au site 2. Cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site 2. Selon la forme et la nature du site 2 (et son contexte spatial) : soit le site le site 2 a intrinsèquement deux côtés (un col, une crète, une rivère, une ville située sur une rivière)… Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site 1, site 2) qui permet de définir deux côtés au site 2 : un côté qui contient le site 1, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant les site 1 au site 2, passant par le site 2. DuMemeCoteQueParRapportA est l’exact opposé de DeLAutreCoteDeParRapportA.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Du même côté que par rapport à</rdfs:label>
+        <rdfs:comment xml:lang="fr">La cible située du même côté que le site X, par rapport au site Y. Cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site Y. Selon la forme et la nature du site Y (et son contexte spatial) : soit le site le site Y a intrinsèquement deux côtés (un col, une crète, une rivère, une ville située sur une rivière)… Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site X, site Y) qui permet de définir deux côtés au site Y : un côté qui contient le site X, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant le site X au site Y, passant par le site Y.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Du même côté que X par rapport à Y</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueParRapportA"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueXParRapportAY"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
         <owl:annotatedTarget xml:lang="fr">c&apos;est côté lac Robert</owl:annotatedTarget>
         <dcterms:source>Lac Robert 2-1</dcterms:source>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueParRapportA"/>
+        <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#DuMemeCoteQueXParRapportAY"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"/>
         <rdfs:comment xml:lang="fr">RelativeNonProjectionAxial n&apos;est pas défini très clairement dans l’ontologie de Bateman (contradiction entre définition/exemples donnés dans le papier et dans l’ontologie elle-même).</rdfs:comment>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#EntreJalonsXEtYSurItineraire -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#EntreJalonsXEtYSurItineraire">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#EntreXetY"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeItinéraire"/>
+        <rdfs:label xml:lang="fr">Entre jalons X et Y sur itinéraire</rdfs:label>
+        <rdfs:label xml:lang="fr">La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), X et Y sont deux jalons connus de cet itinéraire, et la cible est située sur la portion de cet itinéraire délimitée par X et Y.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#EntreXEtYAvecDetours -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#EntreXEtYAvecDetours">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#EntreXetY"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeDirection"/>
+        <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">Cette relation de localisation nécessite deux sites: X et Y. Cette relation de localisation indique que la cible est située quelque part &quot;sur un cheminement entre X et Y&quot;, qui peut potentiellement être contraint par un réseau support non connu. De ce fait il y a une tolérance au dépassement dans l&apos;axe du segment [XY], à une extrémité ou à l&apos;autre, pour tenir compte des éventuels détours nécessaires selon le support du cheminement. Par ailleurs dans la direction orthogonale à l&apos;axe [XY], la cible est a priori davantage susceptible d&apos;être éloignée du segment à l&apos;aplomb du milieu de celui-ci qu&apos;à ses extrémités.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Entre X et Y avec détours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/choucas.ign.fr/orl#EntreXEtYEspaceIsotrope -->
+
+    <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#EntreXEtYEspaceIsotrope">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#EntreXetY"/>
+        <rdfs:comment xml:lang="fr">Cette relation de localisation nécessite deux sites : X et Y. La cible est située quelque part entre X et Y, et l&apos;espace est isotrope, on ne prend donc pas en compte les éventuels détours de cheminement dûs à un réseau support. La cible est située à proximité du segment reliant X et Y. On considère que la cible peut s&apos;en écarter d&apos;autant plus que son projeté orthogonal sur le segment est proche de son milieu.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Entre X et Y en espace isotrope</rdfs:label>
+    </owl:Class>
     
 
 
@@ -922,7 +1128,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeTernaire"/>
         <vann:example xml:lang="fr">Là on est dans le secteur entre… par les pistes forestières, entre cordéac et pellafol</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">Il faut DEUX sites ici (site1 et site2). La cible est située entre les deux. Le cadre de référence est particulièrement important ici. Il faudra le modéliser pour pouvoir spatialiser une relation comme celle-là. Par exemple, si les deux sites peuvent être considérés comme de faible extension spatiale (donc assimilables à des ponctuels), le cadre de référence peut inclure un ou plusieurs tracés à une dimension qui relient les deux sites : tracé d’un itinéraire, etc. (ou une ligne droite en l’absence d’information). Si l’extension spatiale est plus importante, on peut définir une zone « entre les deux » comme dans le modèle 5IM (Clementini et Billen 2006). Mais attention aux cas déictiques comme « je vois Z entre X et Y » ou « nagez entre les deux poteaux » de Bateman et al. 2010.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Il faut deux sites ici (X et Y). La cible est située entre les deux. Le cadre de référence est particulièrement important ici. Il faudra le modéliser pour pouvoir spatialiser une relation comme celle-là. Par exemple, si les deux sites peuvent être considérés comme de faible extension spatiale (donc assimilables à des ponctuels), le cadre de référence peut inclure un ou plusieurs tracés à une dimension qui relient les deux sites : tracé d’un itinéraire, etc. (ou une ligne droite en l’absence d’information). Si l’extension spatiale est plus importante, on peut définir une zone « entre les deux » comme dans le modèle 5IM (Clementini et Billen 2006). Mais attention aux cas déictiques comme « je vois Z entre X et Y » ou « nagez entre les deux poteaux » de Bateman et al. 2010.</rdfs:comment>
         <rdfs:label xml:lang="fr">Entre X et Y</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Distribution"/>
     </owl:Class>
@@ -946,6 +1152,8 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#HorsDePlanimetrique">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDisjointe"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible est située en dehors de l’espace 2,5 D délimité par le site, qui est
+donc considéré comme délimitant une région sur la surface terrestre. HorsDePlanimetrique est mutuellement exclusif avec DansPlanimetrique, mais n&apos;en est pas le complémentaire (cf. ALaFrontiereDe, qui est compatible avec HorsDePlanimetrique, avec DansPlanimetrique, ou avec une situation ou ni l&apos;un ni l&apos;autre ne s&apos;applique).</rdfs:comment>
         <rdfs:label xml:lang="fr">Hors de planimétrique</rdfs:label>
     </owl:Class>
     
@@ -957,6 +1165,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
         <vann:example xml:lang="fr">vers midi, il était près du sommet et dans le brouillard</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
+        <rdfs:comment xml:lang="fr">La cible est &quot;proche&quot; du site (distance qualitative, forcément subjective), mais pas dans le site (DansPlanimetrique) si ce dernier a une emprise non ponctuelle. Par ailleurs la situation se différencie de la situation &quot;Proximal&quot; par la distance qui peut être un peu plus grande, et par l&apos;absence de relation fonctionnelle. Enfin, DansPlanimetrique implique PresDe mais l&apos;inverse n&apos;est pas vrai.</rdfs:comment>
         <rdfs:label xml:lang="fr">Près de</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -974,7 +1183,7 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeDeContact"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeFonctionelle"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeProximité"/>
-        <vann:example xml:lang="fr">Elle est à 50m, je suis sur un promontoire car le réseau ne passait pas.</vann:example>
+        <vann:example xml:lang="fr">Je suis sur un promontoire car le réseau ne passait pas.</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
         <rdfs:comment xml:lang="fr">La cible est dans le site ou à proximité immédiate, qui peut être une proximité fonctionnelle (exemple de la personne qui fait la queue à la poste dans Bateman et al. 2010).</rdfs:comment>
         <rdfs:label xml:lang="fr">Proximal</rdfs:label>
@@ -983,14 +1192,17 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#Proximal"/>
         <owl:annotatedProperty rdf:resource="http://purl.org/vocab/vann/example"/>
-        <owl:annotatedTarget xml:lang="fr">Elle est à 50m, je suis sur un promontoire car le réseau ne passait pas.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="fr">Je suis sur un promontoire car le réseau ne passait pas.</owl:annotatedTarget>
         <dcterms:source>Cornafion 4-2</dcterms:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.purl.org/choucas.ign.fr/orl#Proximal"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal"/>
-        <rdfs:comment xml:lang="fr">Bateman et al. définissent seulement « proximal » et « distal », qu’ils opposent. Nous avons introduit en plus « AuxAlentoursDe » = trop loin pour être considéré come « très proche », mais suffisamment proche pour que le site ait quand même un sens. Du coup, petit doute sur le fait que le « Proximal » de Bateman et al. ne couvre pas une partie de notre « AuxAlentoursDe ».</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Bateman et al. définissent seulement « proximal » et « distal », qu’ils opposent. Nous avons introduit en plus:
+- « AuxAlentoursDe » = trop loin pour être considéré comme « très proche », mais suffisamment proche pour que se repérer par rapport à ce site ait quand même un sens
+-et « PresDe » = proche, sans être exactement au niveau du site.
+Du coup, petit doute sur le fait que le « Proximal » de Bateman et al. ne couvre pas une partie de notre « PresDe » et/ou de notre « AuxAlentoursDe ».</rdfs:comment>
         <rdfs:comment xml:lang="fr">Selon l’échelle considérée, et le « mode d’implantation conceptuel » du site associé (région ou assimilé ponctuel), cet indice pourrait être associé une relation « Parthood » plutôt que « Proximal » au sens de Bateman.</rdfs:comment>
     </owl:Axiom>
     
@@ -1171,7 +1383,8 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
     <owl:Class rdf:about="http://www.purl.org/choucas.ign.fr/orl#SousALAplombDe">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeVerticale"/>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est à une altitude supérieure à celle du site et site et le site est plus ou moins situé sur la ligne de plus grande pente qui passe par la cible, ou inversement (NB : pas facile de calculer la ligne de plus grande pente passant par la cible sans connaître la localisation de la cible... pourtant, si le site est en fond de vallée c’est bien le site qui est situé sur la ligne de plus grande pente passant par la cible, et non l’inverse...). Typiquement, site et cible appartiennent à une même vallée (pb de niveau de granularité...) et sont situés à peu près au même niveau longitudinalement.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La cible est à une altitude inférieure à celle du site et le site est plus ou moins situé sur la ligne de plus grande pente qui passe par la cible, ou inversement . Typiquement, site et cible appartiennent à une même vallée (ce qui pose un problème de niveau de granularité) et sont situés à peu près au même niveau longitudinalement.
+NB : il n&apos;est pas facile de calculer la ligne de plus grande pente passant par la cible sans connaître la localisation de la cible, alors que par définition la localisation de la cible n&apos;est pas forcément connue... Pourtant, si le site est en fond de vallée c’est bien le site qui est situé sur la ligne de plus grande pente passant par la cible, et non l’inverse.</rdfs:comment>
         <rdfs:label xml:lang="fr">Sous à l&apos;aplomb de</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal"/>
     </owl:Class>
@@ -1210,8 +1423,8 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/choucas.ign.fr/orl#RelationSpatialeVerticale"/>
         <vann:example xml:lang="fr">on est sous le déversoir du lac de belledonne</vann:example>
         <orl:atAbstractClass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</orl:atAbstractClass>
-        <rdfs:comment xml:lang="fr">La cible est située sur un chemin menant au site et sous le site</rdfs:comment>
-        <rdfs:label xml:lang="fr">Sous jalon sur chemin</rdfs:label>
+        <rdfs:comment xml:lang="fr">La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et en-dessous (au sens de l&apos;altitude) du site qui est un jalon de cet itinéraire.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Sous jalon sur itinéraire</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal"/>
     </owl:Class>
     <owl:Axiom>
@@ -1262,5 +1475,5 @@ poste » même si on fait la queue sur le trottoir).</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
