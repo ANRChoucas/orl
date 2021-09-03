@@ -23,7 +23,7 @@
         <dc:description xml:lang="en">The Locatiing relationships ontology (ORL ontology) is an application ontology dedicated to locating victims in mountainous zones during a phone call with rescue services. In such circumstances, the location of the victim is often described by means of relations we call &quot;locating relations&quot; with landmark objects, for instance &quot;I am below the summit&quot;, &quot;I see a lake&quot;. The ORL ontology was defined in the context of the research project CHOUCAS, funded by the French National Research Agency (choucas.ign.fr). Its purpose is to identify and organise locating relations used to get ones bearings in mountainous areas. A number of locating relations described in this ontology are equivalent or close to concepts described in the GUM-3-SPACE ontology by Bateman et al (2010). This equivalences and proximities are reported as much as possible by means equivalentClass and seeAlso properties on the concepts. 
 
 The ORL ontology is in French only at this time.</dc:description>
-        <dc:issued>2020-11-17</dc:issued>
+        <dc:issued>2021-09-03</dc:issued>
         <dc:language>fr-fr</dc:language>
         <dc:publisher>ANR CHOUCAS</dc:publisher>
         <dc:title xml:lang="en">Locating relationships ontology</dc:title>
