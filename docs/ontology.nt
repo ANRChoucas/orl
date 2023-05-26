@@ -1,0 +1,965 @@
+<http://www.purl.org/orl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.purl.org/orl> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/orl/1.1> .
+<http://www.purl.org/orl> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/creator> "Ana-Maria Olteanu-Raimond" .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/creator> "Cécile Duchêne" .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/creator> "Mattia Bunel" .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/description> "L’ontologie de relations de localisation (ontologie ORL) est une ontologie d’application dédiée à l’aide de la localisation des victimes en zones de montagne lors d'un appel aux secours. La position de la victime est alors souvent décrite à l'aide de relations que nous appelons \"relations de localisation\" par rapport à des objets repères, par exemple \"Je suis sous le sommet\", \"Je vois un lac\". Elle a été définie dans le cadre du projet de recherche ANR CHOUCAS (choucas.ign.fr).  Elle a pour rôle d’identifier et d’organiser les relations de localisation utilisées pour se repérer en montagne. Un certain nombre de relations de localisation décrites dans cette ontologie sont équivalents ou assez proches de concepts décrits dans l'ontologie GUM-3-SPACE de Bateman et al. Ces équivalences ou proximités sont renseignées au mieux à l'aide de propriétés equivalentClass et seeAlso sur les concepts."@fr .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/description> "The Locating relationships ontology (ORL ontology) is an application ontology dedicated to locating victims in mountainous zones during a phone call with rescue services. In such circumstances, the location of the victim is often described by means of relations we call \"locating relations\" with landmark objects, for instance \"I am below the summit\", \"I see a lake\". The ORL ontology was defined in the context of the research project CHOUCAS, funded by the French National Research Agency (choucas.ign.fr). Its purpose is to identify and organise locating relations used to get ones bearings in mountainous areas. A number of locating relations described in this ontology are equivalent or close to concepts described in the GUM-3-SPACE ontology by Bateman et al (2010). This equivalences and proximities are reported as much as possible by means equivalentClass and seeAlso properties on the concepts. \n\nThe ORL ontology is in French only at this time."@en .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/issued> "2023-05-26" .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/language> "fr-fr" .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/publisher> "ANR CHOUCAS" .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/title> "Locating relationships ontology"@en .
+<http://www.purl.org/orl> <http://purl.org/dc/elements/1.1/title> "Ontologie des relations de localisation"@fr .
+<http://www.purl.org/orl> <http://purl.org/dc/terms/bibliographicCitation> "Bunel M., Duchêne C. et Raimond A-M., 2020, Ontologie des Relations de Localisation (ORL)." .
+<http://www.purl.org/orl> <http://purl.org/dc/terms/created> "2020-02-07" .
+<http://www.purl.org/orl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/oac> .
+<http://www.purl.org/orl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/choucas.ign.fr/oor> .
+<http://www.purl.org/orl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl> .
+<http://www.purl.org/orl> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/orl/1.0> .
+<http://www.purl.org/orl> <http://www.w3.org/2002/07/owl#versionInfo> " Modifications compared to version 1.0:\n\n1. Ajout de concepts (relations de localisation) et de relations entre concepts:\n\n1.1 Ajout de concepts (relations de localisation)\n\n* Ajout de la relation « AuMilieuDe »\n* Ajout des relations « ADistanceTempsDepuis », « ADistanceTempsVers », « ATempsDeMarcheDepuis », « ATempsDeMarcheVers »\n* Ajout de la relation « EntreJalonsXEtYSurItineraire »\n\n1.2 Ajout de relation entre concepts au sein de l'ontologie ORL\n\n* DansLaDirectionDeXDepuisY (IRI résultant d’une modification cf. plus bas) est maintenant une sous-classe de RelationSpatialeTernaire\n\n1.3 Ajout de pointeurs vers des concepts d'autres ontologies\n\n* Sur la relation ALaFrontiereDe, ajout d’un « seeAlso » vers le concept « Peripheral » de l’ontologie GUM-SPACE de Bateman et al. (2010).\n\n\n\n2. Modification d'IRI et de labels\n\n2.1 Modification d'IRI pour qu’elles se terminent par « De » : \n\n* AuDessusProche => AuDessusProcheDe (label modifié aussi : « Au dessus et proche de » => « Au-dessus et proche de »)\n* DistanceQuantitativePlanimetrique => ADistanceQuantitativePlanimetriqueDe (label modifié aussi : « Distance quantitative planimétrique » => « À distance quantitative planimétrique de »)\n* ADistanceQuantitativeRelative => ADistanceQuantitativeRelativeDe (label modifié aussi : « À distance qualitative relative » => « À distance quantitative relative de » NB : correction erreur auqlitative/quantitative au passage)\n* ADistanceTemps => ADistanceTempsDe (label modifié aussi : « À distance temps » => « À distance temps de »)\n* ATempsDeMarche => ATempsDeMarcheDe (label modifié aussi : « À temps de marche » => « À temps de marche de »)\n* AuDessusJalonSurItineraire => AuDessusDeJalonSurItineraire (label modifié aussi pour correction : « Au dessus d'un jalon sur un chemin » => « Au-dessus d'un jalon sur un itinéraire »)\n* AuDessusAltitude => AuDessusDeAltitude (label modifié aussi pour correction : « Au dessus altitude » => « Au-dessus de altitude »)\n\n2.2 Autres corrections sur les IRI (plus ou moins label associé) :\n\n* AvoirDerriereSoit => AvoirDerriereSoi (label modifié aussi : « Avoir derrière soit » => « Avoir derrière soi »)\n* AvoirDevantSoit => AvoirDevantSoi (label modifié aussi : « Avoir devant soit » => « Avoir devant soi »)\n* AEstDe => ALEstDe\n* AOuestDe => ALOuestDe\n* AEstDeExterne => ALEstDeExterne\n* AOuestDeExterne => ALOuestDeExterne\n* AExtremiteDe => ALExtremiteDe\n* DansLaDirectionDe => DansLaDirectionDeXDepuisY (label modifié aussi : « Dans la direction de » => « Dans la direction de X depuis Y »)\n* DeAutreCoteDeParRapportA => DeAutreCoteDeXParRapportAY  (label modifié aussi : « De l'autre côté de par rapport à » => « De l'autre côté de X par rapport à Y »)\n* DuMemeCoteQueXParRapportAY => DuMemeCoteQueXParRapportAY (label modifié aussi : « Du même côté que par rapport à » => « Du même côté que X par rapport à Y »\n* RelationSpatialeItinéraire => RelationSpatialeItineraire (caractère accentué enlevé dans l'IRI)\n\n\n2.3 Corrections sur les labels seuls :\n* « Sous jalon sur chemin » => « Sous jalon sur itinéraire » (pour cohérence avec IRI)\n* « Au dessus à l'aplomb de » => « Au-dessus à l'aplomb de » (pour cohérence avec autres \"au-dessus...\")\n\n3. Modifications sur les définitions\n\n3.1 Ajout de définitions manquantes:\n\n* AuDessusALAplomDe : définition calquée sur celle de SousALAplombDe (après correction de cette dernièrecf. ci-dessous).\n* DansPlanimétrique\n* HorsDePlanimetrique\n* PresDe\n* DansLaDirectionDeXDepuisY \n\n3.2 Correction de définitions qui n'apportaient rien par rapport au simple nom du concept (label ou IRI)\n\n* ALExtremiteDe : « La cible est située à l'extrémité du site. Ce qui impose une relation de contenance. » => « Le site est de forme linéaire et peut donc être considéré comme ayant des extrémités (deux, en principe, sauf si seule une partie du site est de forme très linéaire). La cible est située au niveau (ProcheDe) l'un de ces extrémités. Elle peut être située à l'intérieur du site, ou non. » NB : la contrainte d’une relation de contenance paraissait douteuse et ne se traduisant pas par un héritage du concept DansPlanimetrique. C’est pour ça qu’elle a été supprimée de la définition.\n* DansLaPartieEstDe : « La cible se situe dans le site et dans se partie est. » => « La cible se situe dans le site et dans sa partie est. La « partie est » du site est à définir, par exemple comme la partie à l’est d’une ligne Nord-Sud coupant le site en son milieu. »\n* DansLaPartieNordDe : « La cible se situe dans le site et dans se partie nord. » => « La cible se situe dans le site et dans sa partie nord. La « partie nord » du site est à définir, par exemple comme la partie au nord d’une ligne Est-Ouest coupant le site en son milieu. »\n* DansLaPartieOuestDe : « La cible se situe dans le site et dans se partie ouest. » => « La cible se situe dans le site et dans sa partie ouest. La « partie ouest » du site est à définir, par exemple comme la partie à l’ouest d’une ligne Nord-Sud coupant le site en son milieu. »\n* DansLaPartieSudDe : « La cible se situe dans le site et dans se partie sud. » => « La cible se situe dans le site et dans sa partie sud. La « partie sud » du site est à définir, par exemple comme la partie au sud d’une ligne Est-Ouest coupant le site en son milieu. »\n\n3.3 Autres corrections de définitions:\n\n* SousALAplombDe : dans la définition, correction de deux coquilles dont une erreur altitude supérieure vs inférieure, et réorganisation des éléments de définition pour que ce soit un peu plus propre.\n* ALaFrontiereDe : précision sur la définition : chevauchement possible, mais pas nécessaire, avec DansPlanimetrique et HorsDePlanimetrique\n* Proximal : rectification de l’exemple pour clarifier, et précision sur le commentaire associé au SeeAlso vers le proximal de Bateman et al., pour introduire l’ajout de PresDe dans ORL par rapport à Bateman et al. (seul AuxAlentoursDe était mentionné dans la version précédente, c’était un oubli).\n* AuxAlentoursDe : modification de la définition pour clarifier par rapport à PresDe\n* PresDe : « …DansPlanimetrique implique AuxAlentoursDe mais l'inverse n'est pas vrai. » => « DansPlanimetrique implique PresDe mais l'inverse n'est pas vrai. »\n* AuDessusDeJalonSurItineraire : « La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et au-dessus (au sens de l'altitude) du site qui est un jalon de cet itinéraire. »\n* SousJalonSurItineraire : « La cible est située sur un chemin menant au site et sous le site » => « La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et en-dessous (au sens de l'altitude) du site qui est un jalon de cet itinéraire. »\n* EntreXetY : Remplacement de « site 1 » et « site 2 » par « X » et « Y » dans la définition.\n* DeLAutreCoteDeXParRapportAY :  Révision pour tenir compte du nommage des sites en « X » et « Y », et pour retirer une phrase qui risquait de prêter à confusion sur le fait que la situation est opposée à DuMemeCoteQueXParRapportAY. Nouvelle définition : « La cible est de l’autre côté du site X par rapport au site Y. Autrement dit, la cible et le site Y sont de part et d’autre du site X. Cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site X (comme pour DuMemeCoteQueXParRapportAY le suppose pour le site Y). Selon la forme et la nature du site X (et son contexte spatial) : soit le site le site X a intrinsèquement deux côtés (un col, une crête, une rivière, une ville située sur une rivière)... Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site X, site Y) qui permet de définir deux côtés au site X : un côté qui contient le site Y, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant le site X au site Y, passant par le site X. »\n* DuMemeCoteQueXParRapportAY : de la même manière, révision pour tenir compte du nommage des sites en « X » et « Y », et pour retirer une phrase qui risquait de prêter à confusion sur le fait que la situation est opposée à DeLAutreCoteDeXParRapportAY. Nouvelle définition : « La cible située du même côté que le site X, par rapport au site Y. Cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site Y. Selon la forme et la nature du site Y (et son contexte spatial) : soit le site le site Y a intrinsèquement deux côtés (un col, une crète, une rivère, une ville située sur une rivière)… Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site X, site Y) qui permet de définir deux côtés au site Y : un côté qui contient le site X, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant le site X au site Y, passant par le site Y. »"@fr .
+<http://www.purl.org/orl> <http://www.w3.org/2002/07/owl#versionInfo> "1.1"@fr .
+<http://www.purl.org/orl> <https://vocab.org/vann/preferredNamespaceUri> <http://www.purl.org/orl> .
+<http://www.purl.org/orl> <https://vocab.org/vann/preferredNamespaceUri> "orl" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/issued
+<http://purl.org/dc/elements/1.1/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/example
+<http://purl.org/vocab/vann/example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.purl.org/orl#abbreviation
+<http://www.purl.org/orl#abbreviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.purl.org/orl#atAbstractClass
+<http://www.purl.org/orl#atAbstractClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/orl#atAbstractClass> <http://www.w3.org/2000/01/rdf-schema#comment> "\"True\" is the class is an abstract class. \"False\" otherwise."@en .
+<http://www.purl.org/orl#atAbstractClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Principalement utilisé pour distinguer, dans la hiérarchie des relations de localisation, les classes servant uniquement à définir la hiérarchie des classes décrivants des concepts pouvant être spatialisés à l'aide d'une méthode ad hoc."@fr .
+<http://www.purl.org/orl#atAbstractClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Précise si la classe est abstraite (Vrai) ou non (Faux)."@fr .
+<http://www.purl.org/orl#atAbstractClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#atAbstractClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/orl#RelationDeLocalisation> .
+# 
+# http://www.w3.org/2002/07/owl#equivalentClass
+<http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#sameAs
+<http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://vocab.org/vann/preferredNamespaceUri
+<https://vocab.org/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#ALEstDe> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid1 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East> .
+_:genid1 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid1 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#ALEstDe> .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#ALEstDeExterne> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid2 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal> .
+_:genid2 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid2 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#ALEstDeExterne> .
+_:genid2 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#AuNordDe> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid3 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North> .
+_:genid3 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid3 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#AuNordDe> .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#AuNordDeExterne> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid4 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal> .
+_:genid4 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid4 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#AuNordDeExterne> .
+_:genid4 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#AuSudDe> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid5 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South> .
+_:genid5 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid5 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#AuSudDe> .
+_:genid5 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#AuSudDeExterne> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid6 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal> .
+_:genid6 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid6 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#AuSudDeExterne> .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#ALOuestDe> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid7 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West> .
+_:genid7 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid7 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#ALOuestDe> .
+_:genid7 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.purl.org/orl#ALOuestDeExterne> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid8 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal> .
+_:genid8 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#equivalentClass> .
+_:genid8 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.purl.org/orl#ALOuestDeExterne> .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)." .
+# 
+# http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe
+<http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeProximité> .
+<http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> <http://purl.org/vocab/vann/example> "j'estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d'oiseau"@fr .
+<http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à telle distance du site, exprimée dans une unité de longueur (pas un temps de marche/accès). La distance considérée est planimétrique. Si relief en pente « pas trop forte », ça peut être le long de la pente, mais il ne s’agit pas d’un dénivelé."@fr .
+<http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> <http://www.w3.org/2000/01/rdf-schema#label> "À distance quantitative planimétrique de"@fr .
+<http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#QuantitativeDistance> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid9 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe> .
+_:genid9 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid9 <http://www.w3.org/2002/07/owl#annotatedTarget> "j'estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d'oiseau"@fr .
+_:genid9 <http://purl.org/dc/terms/source> "Grand Veymont 8-1" .
+# 
+# http://www.purl.org/orl#ADistanceQuantitativeRelativeDe
+<http://www.purl.org/orl#ADistanceQuantitativeRelativeDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ADistanceQuantitativeRelativeDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeProximité> .
+<http://www.purl.org/orl#ADistanceQuantitativeRelativeDe> <http://purl.org/vocab/vann/example> "et lui est à une longueur en-dessous (du dos d'âne), donc à une petite longueur du haut du couloir de la Meije"@fr .
+<http://www.purl.org/orl#ADistanceQuantitativeRelativeDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ADistanceQuantitativeRelativeDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située à une certaine distance du site. Cette distance est quantitative et est exprimée par une métrique dépendant du site (eg. À un pâté de maisons). Il n’y a pas de contrainte sur la dimension de la distance, elle peut être planimétrique, altimétrique ou les deux ."@fr .
+<http://www.purl.org/orl#ADistanceQuantitativeRelativeDe> <http://www.w3.org/2000/01/rdf-schema#label> "À distance quantitative relative de"@fr .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid10 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ADistanceQuantitativeRelativeDe> .
+_:genid10 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid10 <http://www.w3.org/2002/07/owl#annotatedTarget> "et lui est à une longueur en-dessous (du dos d'âne), donc à une petite longueur du haut du couloir de la Meije"@fr .
+_:genid10 <http://purl.org/dc/terms/source> "Meije 17 juin 3-1" .
+# 
+# http://www.purl.org/orl#ADistanceTempsDe
+<http://www.purl.org/orl#ADistanceTempsDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ADistanceTempsDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeProximité> .
+<http://www.purl.org/orl#ADistanceTempsDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ADistanceTempsDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à une certaine distance du site. Cette distance est exprimée en temps de parcours. Il est par conséquent nécessaire de connaître le mode de déplacement ou la vitesse de déplacement. La direction du déplacement n'est pas précisée."@fr .
+<http://www.purl.org/orl#ADistanceTempsDe> <http://www.w3.org/2000/01/rdf-schema#label> "À distance temps de"@fr .
+# 
+# http://www.purl.org/orl#ADistanceTempsDepuis
+<http://www.purl.org/orl#ADistanceTempsDepuis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ADistanceTempsDepuis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ADistanceTempsDe> .
+<http://www.purl.org/orl#ADistanceTempsDepuis> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à une certaine distance du site. Cette distance est exprimée en temps de parcours. Il est par conséquent nécessaire de connaître le mode de déplacement ou la vitesse de déplacement. Le déplacement se fait depuis le site vers la cible."@fr .
+<http://www.purl.org/orl#ADistanceTempsDepuis> <http://www.w3.org/2000/01/rdf-schema#label> "À distance temps depuis"@fr .
+# 
+# http://www.purl.org/orl#ADistanceTempsVers
+<http://www.purl.org/orl#ADistanceTempsVers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ADistanceTempsVers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ADistanceTempsDe> .
+<http://www.purl.org/orl#ADistanceTempsVers> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à une certaine distance du site. Cette distance est exprimée en temps de parcours. Il est par conséquent nécessaire de connaître le mode de déplacement ou la vitesse de déplacement. Le déplacement se fait depuis la cible vers le site."@fr .
+<http://www.purl.org/orl#ADistanceTempsVers> <http://www.w3.org/2000/01/rdf-schema#label> "À distance temps vers"@fr .
+# 
+# http://www.purl.org/orl#ADroiteDe
+<http://www.purl.org/orl#ADroiteDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ADroiteDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#ADroiteDe> <http://purl.org/vocab/vann/example> "sur la droite quand on regarde le haut de la station."@fr .
+<http://www.purl.org/orl#ADroiteDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ADroiteDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à droite de l’objet de référence. Ce concept nécessite de connaître l’orientation de la cible"@fr .
+<http://www.purl.org/orl#ADroiteDe> <http://www.w3.org/2000/01/rdf-schema#label> "À droite de"@fr .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ADroiteDe> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedTarget> "sur la droite quand on regarde le haut de la station."@fr .
+_:genid11 <http://purl.org/dc/terms/source> "Les Adrets 5-1" .
+# 
+# http://www.purl.org/orl#AGaucheDe
+<http://www.purl.org/orl#AGaucheDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AGaucheDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#AGaucheDe> <http://purl.org/vocab/vann/example> "Juste sur la gauche, il y a une autre dent, je ne sais pas comment elle s’appelle."@fr .
+<http://www.purl.org/orl#AGaucheDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AGaucheDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à gauche de l’objet de référence. Ce concept nécessite de connaître l’orientation de la cible"@fr .
+<http://www.purl.org/orl#AGaucheDe> <http://www.w3.org/2000/01/rdf-schema#label> "À gauche de"@fr .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid12 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AGaucheDe> .
+_:genid12 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid12 <http://www.w3.org/2002/07/owl#annotatedTarget> "Juste sur la gauche, il y a une autre dent, je ne sais pas comment elle s’appelle."@fr .
+_:genid12 <http://purl.org/dc/terms/source> "Parapente 2-1" .
+# 
+# http://www.purl.org/orl#ALEstDe
+<http://www.purl.org/orl#ALEstDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ALEstDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeCardinalité> .
+<http://www.purl.org/orl#ALEstDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ALEstDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement à l’est du site, sans\npréciser si elle est à dans la partie est du site ou\ndisjointe du site et à l’est de lui."@fr .
+<http://www.purl.org/orl#ALEstDe> <http://www.w3.org/2000/01/rdf-schema#label> "À l'est de"@fr .
+# 
+# http://www.purl.org/orl#ALEstDeExterne
+<http://www.purl.org/orl#ALEstDeExterne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ALEstDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ALEstDe> .
+<http://www.purl.org/orl#ALEstDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDisjointe> .
+<http://www.purl.org/orl#ALEstDeExterne> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ALEstDeExterne> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement à l’est et est disjointe du site."@fr .
+<http://www.purl.org/orl#ALEstDeExterne> <http://www.w3.org/2000/01/rdf-schema#label> "À l'est de externe"@fr .
+# 
+# http://www.purl.org/orl#ALExtremiteDe
+<http://www.purl.org/orl#ALExtremiteDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ALExtremiteDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeContact> .
+<http://www.purl.org/orl#ALExtremiteDe> <http://purl.org/vocab/vann/example> "Il est à l'extrémité ouest d'une espèce de terrasse en béton."@fr .
+<http://www.purl.org/orl#ALExtremiteDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ALExtremiteDe> <http://www.w3.org/2000/01/rdf-schema#comment> "Le site est de forme allongée (il a alors deux extrémités), ou possède une ou plusieurs parties saillantes allongées (il peut alors avoir plusieurs extrémités).  La cible est située au niveau (ProcheDe) l'une de ces extrémités. Elle peut être située à l'intérieur du site, ou non."@fr .
+<http://www.purl.org/orl#ALExtremiteDe> <http://www.w3.org/2000/01/rdf-schema#label> "À l'extrémité de"@fr .
+<http://www.purl.org/orl#ALExtremiteDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Peripheral> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid13 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ALExtremiteDe> .
+_:genid13 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid13 <http://www.w3.org/2002/07/owl#annotatedTarget> "Il est à l'extrémité ouest d'une espèce de terrasse en béton."@fr .
+_:genid13 <http://purl.org/dc/terms/source> "Malaise bastille 4-2" .
+# 
+# http://www.purl.org/orl#ALOuestDe
+<http://www.purl.org/orl#ALOuestDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ALOuestDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeCardinalité> .
+<http://www.purl.org/orl#ALOuestDe> <http://purl.org/vocab/vann/example> "oui, et là on est à l'Ouest (grande Sure, rochers de Lorzier)."@fr .
+<http://www.purl.org/orl#ALOuestDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ALOuestDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement à l’ouest du site, sans\npréciser si elle est à dans la partie ouest du site ou\ndisjointe du site et à son ouest."@fr .
+<http://www.purl.org/orl#ALOuestDe> <http://www.w3.org/2000/01/rdf-schema#label> "À l'ouest de"@fr .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid14 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ALOuestDe> .
+_:genid14 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid14 <http://www.w3.org/2002/07/owl#annotatedTarget> "oui, et là on est à l'Ouest (grande Sure, rochers de Lorzier)."@fr .
+_:genid14 <http://purl.org/dc/terms/source> "Grande Sure 4-1" .
+# 
+# http://www.purl.org/orl#ALOuestDeExterne
+<http://www.purl.org/orl#ALOuestDeExterne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ALOuestDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ALOuestDe> .
+<http://www.purl.org/orl#ALOuestDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDisjointe> .
+<http://www.purl.org/orl#ALOuestDeExterne> <http://purl.org/vocab/vann/example> "[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur"@fr .
+<http://www.purl.org/orl#ALOuestDeExterne> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ALOuestDeExterne> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement à l’ouest et est disjointe du site."@fr .
+<http://www.purl.org/orl#ALOuestDeExterne> <http://www.w3.org/2000/01/rdf-schema#label> "À l'ouest de externe"@fr .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid15 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ALOuestDeExterne> .
+_:genid15 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid15 <http://www.w3.org/2002/07/owl#annotatedTarget> "[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur"@fr .
+_:genid15 <http://purl.org/dc/terms/source> "Cornafion 7-1" .
+# 
+# http://www.purl.org/orl#ALaFrontiereDe
+<http://www.purl.org/orl#ALaFrontiereDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ALaFrontiereDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeContact> .
+<http://www.purl.org/orl#ALaFrontiereDe> <http://purl.org/vocab/vann/example> "Je suis un peu à la sortie de la forêt."@fr .
+<http://www.purl.org/orl#ALaFrontiereDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ALaFrontiereDe> <http://www.w3.org/2000/01/rdf-schema#comment> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Peripheral> .
+<http://www.purl.org/orl#ALaFrontiereDe> <http://www.w3.org/2000/01/rdf-schema#comment> "Le site a une emprise spatiale linéaire ou surfacique. La cible est située « proche » de ses frontières. La cible peut indifféremment se situer à l’intérieur (DansPlanimétrique) du site, ou à l'extérieur (HordDePlanimetrique) ou ni l'un ni l'autre (\"vraiment sur la frontière\"). Si elle est à l’intérieur, elle est alors dans le complémentaire de la zone de l’espace qui vérifier la relation AuMilieuDe (mais ALaFrontiereDe et AuMilieuDe ne couvrent pas nécessairement tout le site à eux deux). Très probablement, la distance à considérer par rapport aux frontières dépend de la nature du site et/ou de sa taille."@fr .
+<http://www.purl.org/orl#ALaFrontiereDe> <http://www.w3.org/2000/01/rdf-schema#label> "À la frontière de"@fr .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid16 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ALaFrontiereDe> .
+_:genid16 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid16 <http://www.w3.org/2002/07/owl#annotatedTarget> "Je suis un peu à la sortie de la forêt."@fr .
+_:genid16 <http://purl.org/dc/terms/source> "Moucherotte 25-1" .
+# 
+# http://www.purl.org/orl#ALaMemeAltitudeQue
+<http://www.purl.org/orl#ALaMemeAltitudeQue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ALaMemeAltitudeQue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#ALaMemeAltitudeQue> <http://purl.org/vocab/vann/example> "c’est à 2300 mètres d’altitude"@fr .
+<http://www.purl.org/orl#ALaMemeAltitudeQue> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ALaMemeAltitudeQue> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située à la même altitude que le site. Le site peut être une altitude absolue (=> donc plus ou moins une courbe de niveau ou un « plan de niveau »), ou un objet dont l’altitude sert donc de référence."@fr .
+<http://www.purl.org/orl#ALaMemeAltitudeQue> <http://www.w3.org/2000/01/rdf-schema#label> "À la même altitude que"@fr .
+<http://www.purl.org/orl#ALaMemeAltitudeQue> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#HeightNonProjectionAxial> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid17 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ALaMemeAltitudeQue> .
+_:genid17 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid17 <http://www.w3.org/2002/07/owl#annotatedTarget> "c’est à 2300 mètres d’altitude"@fr .
+_:genid17 <http://purl.org/dc/terms/source> "2 alpes_extrait 3-1" .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid18 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ALaMemeAltitudeQue> .
+_:genid18 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid18 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#HeightNonProjectionAxial> .
+_:genid18 <http://www.w3.org/2000/01/rdf-schema#comment> "Pour nous, dans ce cas, une altitude absolue est considérée comme le site (=> d’altitude absolue tant), et a relation est une relation de similarité d’altitude, alors que dans Bateman pas sûr que ce soit exactement pareil."@fr .
+# 
+# http://www.purl.org/orl#ATempsDeMarcheDe
+<http://www.purl.org/orl#ATempsDeMarcheDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ATempsDeMarcheDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ADistanceTempsDe> .
+<http://www.purl.org/orl#ATempsDeMarcheDe> <http://purl.org/vocab/vann/example> "on est à 10 minutes du sommet de la Bastille"@fr .
+<http://www.purl.org/orl#ATempsDeMarcheDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ATempsDeMarcheDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à tel temps de marche du site, en marchant, sans préciser si la marche se fait depuis ou vers le site. (temps de marche en propriété de la relation)."@fr .
+<http://www.purl.org/orl#ATempsDeMarcheDe> <http://www.w3.org/2000/01/rdf-schema#label> "À temps de marche de"@fr .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid19 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ATempsDeMarcheDe> .
+_:genid19 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid19 <http://www.w3.org/2002/07/owl#annotatedTarget> "on est à 10 minutes du sommet de la Bastille"@fr .
+_:genid19 <http://purl.org/dc/terms/source> "Malaise Bastille 1-1" .
+# 
+# http://www.purl.org/orl#ATempsDeMarcheDepuis
+<http://www.purl.org/orl#ATempsDeMarcheDepuis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ATempsDeMarcheDepuis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ATempsDeMarcheDe> .
+<http://www.purl.org/orl#ATempsDeMarcheDepuis> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à tel temps de marche du site, en marchant depuis le site vers la cible. (temps de marche en propriété de la relation)." .
+<http://www.purl.org/orl#ATempsDeMarcheDepuis> <http://www.w3.org/2000/01/rdf-schema#label> "À temps de marche depuis"@fr .
+# 
+# http://www.purl.org/orl#ATempsDeMarcheVers
+<http://www.purl.org/orl#ATempsDeMarcheVers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ATempsDeMarcheVers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ATempsDeMarcheDe> .
+<http://www.purl.org/orl#ATempsDeMarcheVers> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à tel temps de marche du site, en marchant vers le site depuis la cible. (temps de marche en propriété de la relation)."@fr .
+<http://www.purl.org/orl#ATempsDeMarcheVers> <http://www.w3.org/2000/01/rdf-schema#label> "À temps de marche vers"@fr .
+# 
+# http://www.purl.org/orl#ApresJalonSurItineraire
+<http://www.purl.org/orl#ApresJalonSurItineraire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#ApresJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeItineraire> .
+<http://www.purl.org/orl#ApresJalonSurItineraire> <http://purl.org/vocab/vann/example> "après le parking de la Villette."@fr .
+<http://www.purl.org/orl#ApresJalonSurItineraire> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#ApresJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et après le site qui est un jalon de cet itinéraire. Cela suppose d’avoir défini un référentiel des directions associé à l’itinéraire. Ce référentiel est souvent lié au sens de progression sur l’itinéraire (\"l’après\" est vers la destination, \"l’avant\" vers l’origine)."@fr .
+<http://www.purl.org/orl#ApresJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#label> "Après un jalon sur itinéraire"@fr .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid20 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#ApresJalonSurItineraire> .
+_:genid20 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid20 <http://www.w3.org/2002/07/owl#annotatedTarget> "après le parking de la Villette."@fr .
+_:genid20 <http://purl.org/dc/terms/source> "Col du Sabot 3-1" .
+# 
+# http://www.purl.org/orl#AuDessusALAplombDe
+<http://www.purl.org/orl#AuDessusALAplombDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuDessusALAplombDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#AuDessusALAplombDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuDessusALAplombDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à une altitude supérieure à celle du site et le site est plus ou moins situé sur la ligne de plus grande pente qui passe par la cible, ou inversement . Typiquement, site et cible appartiennent à une même vallée (ce qui pose un problème de niveau de granularité) et sont situés à peu près au même niveau longitudinalement.\nNB : il n'est pas facile de calculer la ligne de plus grande pente passant par la cible sans connaître la localisation de la cible, alors que par définition la localisation de la cible n'est pas forcément connue... Pourtant, si le site est en fond de vallée c’est bien le site qui est situé sur la ligne de plus grande pente passant par la cible, et non l’inverse."@fr .
+<http://www.purl.org/orl#AuDessusALAplombDe> <http://www.w3.org/2000/01/rdf-schema#label> "Au-dessus à l'aplomb de"@fr .
+# 
+# http://www.purl.org/orl#AuDessusDeAltitude
+<http://www.purl.org/orl#AuDessusDeAltitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuDessusDeAltitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#AuDessusDeAltitude> <http://purl.org/vocab/vann/example> "Au-dessus de Percolin, y’a la cabane du berger de Bellefont et on est 50 mètres au-dessus"@fr .
+<http://www.purl.org/orl#AuDessusDeAltitude> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuDessusDeAltitude> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible a une altitude supérieure à celle du site. La distance entre le site est la cible n’est pas contraignante."@fr .
+<http://www.purl.org/orl#AuDessusDeAltitude> <http://www.w3.org/2000/01/rdf-schema#label> "Au-dessus de altitude"@fr .
+<http://www.purl.org/orl#AuDessusDeAltitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjection> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid21 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuDessusDeAltitude> .
+_:genid21 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid21 <http://www.w3.org/2002/07/owl#annotatedTarget> "Au-dessus de Percolin, y’a la cabane du berger de Bellefont et on est 50 mètres au-dessus"@fr .
+_:genid21 <http://purl.org/dc/terms/source> "Col de Bellefond 3-1" .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid22 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuDessusDeAltitude> .
+_:genid22 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid22 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjection> .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#comment> "Le concept AuDessusAltitude n’impose pas que la cible soit située à l’intérieur ou à l’extérieur du site, par conséquent le concept le plus proche dans l’ontologie de Bateman et le AboveProjection. Pas certain pourtant que les deux concepts soient parfaitement équivalents."@fr .
+# 
+# http://www.purl.org/orl#AuDessusDeJalonSurItineraire
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeItineraire> .
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://purl.org/vocab/vann/example> "...sur le sentier qui mène à la cascade de l’oursière, au-dessus de la cascade de l’oursière"@fr .
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et au-dessus (au sens de l'altitude) du site qui est un jalon de cet itinéraire."@fr .
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#label> "Au-dessus d'un jalon sur un itinéraire"@fr .
+<http://www.purl.org/orl#AuDessusDeJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjectionExternal> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid23 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuDessusDeJalonSurItineraire> .
+_:genid23 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid23 <http://www.w3.org/2002/07/owl#annotatedTarget> "...sur le sentier qui mène à la cascade de l’oursière, au-dessus de la cascade de l’oursière"@fr .
+_:genid23 <http://purl.org/dc/terms/source> "Cascade de l'oursière 1-3" .
+# 
+# http://www.purl.org/orl#AuDessusProcheDe
+<http://www.purl.org/orl#AuDessusProcheDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuDessusProcheDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeProximité> .
+<http://www.purl.org/orl#AuDessusProcheDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#AuDessusProcheDe> <http://purl.org/vocab/vann/example> "juste au-dessus de Bernin"@fr .
+<http://www.purl.org/orl#AuDessusProcheDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuDessusProcheDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est proche et a une altitude supérieure à celle du site."@fr .
+<http://www.purl.org/orl#AuDessusProcheDe> <http://www.w3.org/2000/01/rdf-schema#label> "Au-dessus et proche de"@fr .
+<http://www.purl.org/orl#AuDessusProcheDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjectionExternal> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid24 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuDessusProcheDe> .
+_:genid24 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid24 <http://www.w3.org/2002/07/owl#annotatedTarget> "juste au-dessus de Bernin"@fr .
+_:genid24 <http://purl.org/dc/terms/source> "Saint Pancrasse 4-1" .
+# 
+# http://www.purl.org/orl#AuMilieuDe
+<http://www.purl.org/orl#AuMilieuDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuMilieuDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeContact> .
+<http://www.purl.org/orl#AuMilieuDe> <http://www.w3.org/2000/01/rdf-schema#comment> "Le site a une emprise spatiale linéaire ou surfacique. La cible est située à l’intérieur du site (DansPlanimetrique), suffisamment loin de ses frontières pour qu’on ne puisse pas considérer qu’elle en est au bord. Très probablement, la distance à considérer par rapport aux frontières dépend de la nature du site et/ou de sa taille."@fr .
+<http://www.purl.org/orl#AuMilieuDe> <http://www.w3.org/2000/01/rdf-schema#label> "Au milieu de"@fr .
+# 
+# http://www.purl.org/orl#AuNordDe
+<http://www.purl.org/orl#AuNordDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuNordDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeCardinalité> .
+<http://www.purl.org/orl#AuNordDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuNordDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement au nord du site, sans\npréciser si elle est à dans la partie norddu site ou\ndisjointe du site et à son nord."@fr .
+<http://www.purl.org/orl#AuNordDe> <http://www.w3.org/2000/01/rdf-schema#label> "Au nord de"@fr .
+# 
+# http://www.purl.org/orl#AuNordDeExterne
+<http://www.purl.org/orl#AuNordDeExterne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuNordDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#AuNordDe> .
+<http://www.purl.org/orl#AuNordDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDisjointe> .
+<http://www.purl.org/orl#AuNordDeExterne> <http://purl.org/vocab/vann/example> "non, côté Nord (du Pas de la Ville), pardon."@fr .
+<http://www.purl.org/orl#AuNordDeExterne> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuNordDeExterne> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement au nord et est disjointe du site."@fr .
+<http://www.purl.org/orl#AuNordDeExterne> <http://www.w3.org/2000/01/rdf-schema#label> "Au nord de externe"@fr .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid25 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuNordDeExterne> .
+_:genid25 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid25 <http://www.w3.org/2002/07/owl#annotatedTarget> "non, côté Nord (du Pas de la Ville), pardon."@fr .
+_:genid25 <http://purl.org/dc/terms/source> "Grand Veymont 3-1" .
+# 
+# http://www.purl.org/orl#AuSudDe
+<http://www.purl.org/orl#AuSudDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuSudDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeCardinalité> .
+<http://www.purl.org/orl#AuSudDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuSudDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement au sud  du site, sans\npréciser si elle est à dans la partie sud du site ou\ndisjointe du site et à son sud."@fr .
+<http://www.purl.org/orl#AuSudDe> <http://www.w3.org/2000/01/rdf-schema#label> "Au sud de"@fr .
+# 
+# http://www.purl.org/orl#AuSudDeExterne
+<http://www.purl.org/orl#AuSudDeExterne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuSudDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#AuSudDe> .
+<http://www.purl.org/orl#AuSudDeExterne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDisjointe> .
+<http://www.purl.org/orl#AuSudDeExterne> <http://purl.org/vocab/vann/example> "je suis entre le grand veymont (sous le grand veymont) et Pas de la Ville, tout à fait, coté sud."@fr .
+<http://www.purl.org/orl#AuSudDeExterne> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuSudDeExterne> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe globalement au sud et est disjointe du site."@fr .
+<http://www.purl.org/orl#AuSudDeExterne> <http://www.w3.org/2000/01/rdf-schema#label> "Au sud de externe"@fr .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid26 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuSudDeExterne> .
+_:genid26 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid26 <http://www.w3.org/2002/07/owl#annotatedTarget> "je suis entre le grand veymont (sous le grand veymont) et Pas de la Ville, tout à fait, coté sud."@fr .
+_:genid26 <http://purl.org/dc/terms/source> "Grand Veymont 2-3" .
+# 
+# http://www.purl.org/orl#AuxAlentoursDe
+<http://www.purl.org/orl#AuxAlentoursDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AuxAlentoursDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeProximité> .
+<http://www.purl.org/orl#AuxAlentoursDe> <http://purl.org/vocab/vann/example> "dans le massif de la chartreuse"@fr .
+<http://www.purl.org/orl#AuxAlentoursDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AuxAlentoursDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est suffisamment proche du site pour qu’on puisse considérer que le site reste un point de repère qui a un sens, mais potentiellement suffisamment loin pour qu'on ne puisse pas considérer qu'on est nécessairement dans le cas Proximal ou PresDe. La proximité qui pourrait s’en déduire est généralement dépendante d’un « rayonnement » qui pourrait êtrre affecté au site (lié à sa renommée, à sa taille typiquemnet pour un lieu habité, à sa saillance...). Il peut y avoir connexion topologique entre la cible et le site, ou pas. Exemple : « je suis dans le coin du mont-Blanc »."@fr .
+<http://www.purl.org/orl#AuxAlentoursDe> <http://www.w3.org/2000/01/rdf-schema#label> "Aux alentours de"@fr .
+<http://www.purl.org/orl#AuxAlentoursDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid27 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuxAlentoursDe> .
+_:genid27 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid27 <http://www.w3.org/2002/07/owl#annotatedTarget> "dans le massif de la chartreuse"@fr .
+_:genid27 <http://purl.org/dc/terms/source> "Chalet de la charmette_extrait 1-1" .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid28 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AuxAlentoursDe> .
+_:genid28 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid28 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal> .
+_:genid28 <http://www.w3.org/2000/01/rdf-schema#comment> "Idée à creuser pour avoir une idée de l’échelle/distance du « rayonnement » du site : si plusieurs éléments de localisation sont données avec cette relation AuxAlentoursDe et avec plusieurs sites différents, les interdistances entre les différents sites peuvent peut-être donner un ordre de grandeur."@fr .
+_:genid28 <http://www.w3.org/2000/01/rdf-schema#comment> "« Proximal » dénote est un sous-cas dans lequel la relation de\nproximité est plus forte, et a un aspect fonctionnel (ex : « à la\nposte » même si on fait la queue sur le trottoir)."@fr .
+# 
+# http://www.purl.org/orl#AvantJalonSurItineraire
+<http://www.purl.org/orl#AvantJalonSurItineraire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AvantJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeItineraire> .
+<http://www.purl.org/orl#AvantJalonSurItineraire> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AvantJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et avant le site qui est un jalon de cet itinéraire. Cela suppose d’avoir défini un référentiel des directions associé à l’itinéraire. Ce référentiel est souvent lié au sens de progression sur l’itinéraire (\"l’après\" est vers la destination, \"l’avant\" vers l’origine)."@fr .
+<http://www.purl.org/orl#AvantJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#label> "Avant un jalon sur itinéraire"@fr .
+# 
+# http://www.purl.org/orl#AvoirASaDroite
+<http://www.purl.org/orl#AvoirASaDroite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AvoirASaDroite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#AvoirASaDroite> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AvoirASaDroite> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est munie d’un référentiel des directions intrinsèque : elle a une gauche et une droite (et un avant, un arrière), par exemple parce que c’est un être animé muni d’un visage. Dans ce référentiel des directions, et plus précisément sur l’axe gauche-droite de ce référentiel, le site est situé à droite de la cible (donc la cible a le site à sa droite, au sens commun de l’expression). Le référentiel des directions doit être modélisé explicitement (à préciser : comment)..."@fr .
+<http://www.purl.org/orl#AvoirASaDroite> <http://www.w3.org/2000/01/rdf-schema#label> "Avoir à sa droite"@fr .
+# 
+# http://www.purl.org/orl#AvoirASaGauche
+<http://www.purl.org/orl#AvoirASaGauche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AvoirASaGauche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#AvoirASaGauche> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AvoirASaGauche> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est munie d’un référentiel des directions intrinsèque : elle a une gauche et une droite (et un avant, un arrière), par exemple parce que c’est un être animé muni d’un visage. Dans ce référentiel des directions, et plus précisément sur l’axe gauche-droite de ce référentiel, le site est situé à gauche de la cible (donc la cible a le site à sa gauche, au sens commun de l’expression). Le référentiel des directions doit être modélisé explicitement (à préciser : comment)..."@fr .
+<http://www.purl.org/orl#AvoirASaGauche> <http://www.w3.org/2000/01/rdf-schema#label> "Avoir à sa gauche"@fr .
+# 
+# http://www.purl.org/orl#AvoirDerriereSoi
+<http://www.purl.org/orl#AvoirDerriereSoi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AvoirDerriereSoi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#AvoirDerriereSoi> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AvoirDerriereSoi> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est munie d’un référentiel des directions intrinsèque : elle a un avant et un arrière, (et une gauche, une droite), par exemple parce que c’est un être animé muni d’un visage. Dans ce référentiel des directions, et plus précisément sur l’axe avant-arrière de ce référentiel, le site est situé derrière la cible (donc la cible a le site derrière elle, au sens commun de l’expression). Le référentiel des directions doit être modélisé explicitement (à préciser : comment)..."@fr .
+<http://www.purl.org/orl#AvoirDerriereSoi> <http://www.w3.org/2000/01/rdf-schema#label> "Avoir derrière soi"@fr .
+# 
+# http://www.purl.org/orl#AvoirDevantSoi
+<http://www.purl.org/orl#AvoirDevantSoi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#AvoirDevantSoi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#AvoirDevantSoi> <http://purl.org/vocab/vann/example> "devant moi j’ai la plaine, et à gauche j’ai quand même des sapins."@fr .
+<http://www.purl.org/orl#AvoirDevantSoi> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#AvoirDevantSoi> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est munie d’un référentiel des directions intrinsèque : elle a un avant et un arrière, (et une gauche, une droite), par exemple parce que c’est un être animé muni d’un visage. Dans ce référentiel des directions, et plus précisément sur l’axe avant-arrière de ce référentiel, le site est situé devant la cible (donc la cible a le site devant elle, au sens commun de l’expression). Le référentiel des directions doit être modélisé explicitement (à préciser : comment)..."@fr .
+<http://www.purl.org/orl#AvoirDevantSoi> <http://www.w3.org/2000/01/rdf-schema#label> "Avoir devant soi"@fr .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid29 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#AvoirDevantSoi> .
+_:genid29 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid29 <http://www.w3.org/2002/07/owl#annotatedTarget> "devant moi j’ai la plaine, et à gauche j’ai quand même des sapins."@fr .
+_:genid29 <http://purl.org/dc/terms/source> "Moucherotte 27-1" .
+# 
+# http://www.purl.org/orl#CibleVoitSite
+<http://www.purl.org/orl#CibleVoitSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#CibleVoitSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationDeLocalisation> .
+<http://www.purl.org/orl#CibleVoitSite> <http://purl.org/vocab/vann/example> "Je suis vraiment en montagne, je vois les plaines, je vois un grand découvert devant moi."@fr .
+<http://www.purl.org/orl#CibleVoitSite> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#CibleVoitSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Le site est visible depuis la cible (ex. la victime à localiser dit qu'elle voit un lac)."@fr .
+<http://www.purl.org/orl#CibleVoitSite> <http://www.w3.org/2000/01/rdf-schema#label> "Cible voit Site"@fr .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid30 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#CibleVoitSite> .
+_:genid30 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid30 <http://www.w3.org/2002/07/owl#annotatedTarget> "Je suis vraiment en montagne, je vois les plaines, je vois un grand découvert devant moi."@fr .
+_:genid30 <http://purl.org/dc/terms/source> "Echirolles 2-3" .
+# 
+# http://www.purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope
+<http://www.purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeCardinalité> .
+<http://www.purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeTernaire> .
+<http://www.purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette relation de localisation nécessite deux sites: X qui fixe la direction générale (dans un environnement supposé isotrope, c'est-à-dire sans réseau support) et Y qui donne le point d'origine de cette direction. Ici on considère donc que la cible est située \"globalement\" dans la direction de Y depuis X. Cette relation généralise les relations de cardinalité classiques (ex. AuNordDe, ALOuestDe…)"@fr .
+<http://www.purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la direction de X depuis Y en espace isotrope"@fr .
+# 
+# http://www.purl.org/orl#DansLaPartieBasseDe
+<http://www.purl.org/orl#DansLaPartieBasseDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaPartieBasseDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#DansPlanimetrique> .
+<http://www.purl.org/orl#DansLaPartieBasseDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#DansLaPartieBasseDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansLaPartieBasseDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située dans la partie basse du site. Cela suppose de pouvoir définir une \"partie basse\" du site."@fr .
+<http://www.purl.org/orl#DansLaPartieBasseDe> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la partie basse de"@fr .
+# 
+# http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY
+<http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#DansPlanimetrique> .
+<http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeTernaire> .
+<http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> <http://purl.org/vocab/vann/example> "Dans la Combe de la Glière côté télésiège…"@fr .
+<http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> <http://www.w3.org/2000/01/rdf-schema#comment> "Le site 1 (X) est un surfacique (en 2,5D) le site 2 (Y) est situé en dehors du site 1 et permet de délimiter une portion du site 1 qui est \"la partie la plus proche\" du site 2. La cible est alors située dans le site 1 (DansPlanimétrique), dans cette \"partie la plus proche\" du site 2."@fr .
+<http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la partie de X la plus proche de Y"@fr .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid31 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY> .
+_:genid31 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid31 <http://www.w3.org/2002/07/owl#annotatedTarget> "Dans la Combe de la Glière côté télésiège…"@fr .
+_:genid31 <http://purl.org/dc/terms/source> "2015_8_26_17_10_10_0_6_54_ch2 9-2" .
+# 
+# http://www.purl.org/orl#DansLaPartieEstDe
+<http://www.purl.org/orl#DansLaPartieEstDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaPartieEstDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ALEstDe> .
+<http://www.purl.org/orl#DansLaPartieEstDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#DansPlanimetrique> .
+<http://www.purl.org/orl#DansLaPartieEstDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansLaPartieEstDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe dans le site et dans sa partie est. La « partie est » du site est à définir, par exemple comme la partie à l’est d’une ligne Nord-Sud coupant le site en son milieu."@fr .
+<http://www.purl.org/orl#DansLaPartieEstDe> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la partie est de"@fr .
+<http://www.purl.org/orl#DansLaPartieEstDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastInternal> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid32 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DansLaPartieEstDe> .
+_:genid32 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid32 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastInternal> .
+_:genid32 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."@fr .
+# 
+# http://www.purl.org/orl#DansLaPartieHauteDe
+<http://www.purl.org/orl#DansLaPartieHauteDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaPartieHauteDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#DansPlanimetrique> .
+<http://www.purl.org/orl#DansLaPartieHauteDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#DansLaPartieHauteDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansLaPartieHauteDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située dans la partie haute du site. Cela suppose de pouvoir définir une \"partie haute\" du site."@fr .
+<http://www.purl.org/orl#DansLaPartieHauteDe> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la partie haute de"@fr .
+# 
+# http://www.purl.org/orl#DansLaPartieNordDe
+<http://www.purl.org/orl#DansLaPartieNordDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaPartieNordDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#AuNordDe> .
+<http://www.purl.org/orl#DansLaPartieNordDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#DansPlanimetrique> .
+<http://www.purl.org/orl#DansLaPartieNordDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansLaPartieNordDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe dans le site et dans sa partie nord. La « partie nord » du site est à définir, par exemple comme la partie au nord d’une ligne Est-Ouest coupant le site en son milieu."@fr .
+<http://www.purl.org/orl#DansLaPartieNordDe> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la partie nord de"@fr .
+<http://www.purl.org/orl#DansLaPartieNordDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthInternal> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid33 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DansLaPartieNordDe> .
+_:genid33 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid33 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthInternal> .
+_:genid33 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."@fr .
+# 
+# http://www.purl.org/orl#DansLaPartieOuestDe
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#ALOuestDe> .
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#DansPlanimetrique> .
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://purl.org/vocab/vann/example> "il est à l'extrémité ouest d'une espèce de terrasse en béton."@fr .
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe dans le site et dans sa partie ouest. La « partie ouest » du site est à définir, par exemple comme la partie à l'ouest d’une ligne Nord-Sud coupant le site en son milieu."@fr .
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la partie ouest de"@fr .
+<http://www.purl.org/orl#DansLaPartieOuestDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestInternal> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid34 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DansLaPartieOuestDe> .
+_:genid34 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid34 <http://www.w3.org/2002/07/owl#annotatedTarget> "il est à l'extrémité ouest d'une espèce de terrasse en béton."@fr .
+_:genid34 <http://purl.org/dc/terms/source> "Malaise bastille 2 4-1" .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid35 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DansLaPartieOuestDe> .
+_:genid35 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid35 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestInternal> .
+_:genid35 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."@fr .
+# 
+# http://www.purl.org/orl#DansLaPartieSudDe
+<http://www.purl.org/orl#DansLaPartieSudDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansLaPartieSudDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#AuSudDe> .
+<http://www.purl.org/orl#DansLaPartieSudDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#DansPlanimetrique> .
+<http://www.purl.org/orl#DansLaPartieSudDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansLaPartieSudDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe dans le site et dans sa partie sud. La « partie sud » du site est à définir, par exemple comme la partie au sud d’une ligne Est-Ouest coupant le site en son milieu."@fr .
+<http://www.purl.org/orl#DansLaPartieSudDe> <http://www.w3.org/2000/01/rdf-schema#label> "Dans la partie sud de"@fr .
+<http://www.purl.org/orl#DansLaPartieSudDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthInternal> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid36 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DansLaPartieSudDe> .
+_:genid36 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid36 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthInternal> .
+_:genid36 <http://www.w3.org/2000/01/rdf-schema#comment> "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."@fr .
+# 
+# http://www.purl.org/orl#DansPlanimetrique
+<http://www.purl.org/orl#DansPlanimetrique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DansPlanimetrique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeContact> .
+<http://www.purl.org/orl#DansPlanimetrique> <http://purl.org/vocab/vann/example> "non, on est en forêt."@fr .
+<http://www.purl.org/orl#DansPlanimetrique> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DansPlanimetrique> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située dans l’espace 2,5 D délimité par le site, qui est\ndonc considéré comme délimitant une région sur la surface terrestre.\nDansPlanimetrique est mutuellement exclusif avec HorsDePlanimetrique, mais n'en est pas le complémentaire (cf. ALaFrontiereDe, qui est compatible avec HorsDePlanimetrique, avec DansPlanimetrique, ou avec une situation ou ni l'un ni l'autre ne s'applique)."@fr .
+<http://www.purl.org/orl#DansPlanimetrique> <http://www.w3.org/2000/01/rdf-schema#label> "Dans planimétrique"@fr .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid37 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DansPlanimetrique> .
+_:genid37 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid37 <http://www.w3.org/2002/07/owl#annotatedTarget> "non, on est en forêt."@fr .
+_:genid37 <http://purl.org/dc/terms/source> "Cascade de l'oursière 7-1" .
+# 
+# http://www.purl.org/orl#DeAutreCoteDeXParRapportAY
+<http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeTernaire> .
+<http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> <http://purl.org/vocab/vann/example> "Les rochers de l’homme, vous descendiez de l’autre côté plutôt ?"@fr .
+<http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est de l’autre côté du site X par rapport au site Y. Autrement dit, la cible et le site Y sont de part et d’autre du site X. Cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site X (comme pour DuMemeCoteQueXParRapportAY le suppose pour le site Y). Selon la forme et la nature du site X (et son contexte spatial) : soit le site le site X a intrinsèquement deux côtés (un col, une crête, une rivière, une ville située sur une rivière)... Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site X, site Y) qui permet de définir deux côtés au site X : un côté qui contient le site Y, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant le site X au site Y, passant par le site X."@fr .
+<http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#label> "De l'autre côté de X par rapport à Y"@fr .
+<http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid38 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> .
+_:genid38 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid38 <http://www.w3.org/2002/07/owl#annotatedTarget> "Les rochers de l’homme, vous descendiez de l’autre côté plutôt ?"@fr .
+_:genid38 <http://purl.org/dc/terms/source> "Col de la mine de fer 7-1" .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid39 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DeAutreCoteDeXParRapportAY> .
+_:genid39 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid39 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial> .
+_:genid39 <http://www.w3.org/2000/01/rdf-schema#comment> "RelativeNonProjectionAxial n'est pas défini très clairement dans l’ontologie de Bateman (contradiction entre définition/exemples donnés dans le papier et dans l’ontologie elle-même)."@fr .
+# 
+# http://www.purl.org/orl#DuMemeCoteQueXParRapportAY
+<http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeTernaire> .
+<http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> <http://purl.org/vocab/vann/example> "c'est côté lac Robert"@fr .
+<http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible située du même côté que le site X, par rapport au site Y. Cela suppose qu’on peut partitionner l’espace en deux zones appelées les deux « côtés » du site Y. Selon la forme et la nature du site Y (et son contexte spatial) : soit le site le site Y a intrinsèquement deux côtés (un col, une crète, une rivère, une ville située sur une rivière)… Soit, pour deux sites assimilables à des ponctuels et sans contexte spatial particulier, c’est le couple (site X, site Y) qui permet de définir deux côtés au site Y : un côté qui contient le site X, et un côté qui ne le contient pas. Typiquement la limite est alors la perpendiculaire au segment joignant le site X au site Y, passant par le site Y."@fr .
+<http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#label> "Du même côté que X par rapport à Y"@fr .
+<http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid40 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> .
+_:genid40 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid40 <http://www.w3.org/2002/07/owl#annotatedTarget> "c'est côté lac Robert"@fr .
+_:genid40 <http://purl.org/dc/terms/source> "Lac Robert 2-1" .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid41 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#DuMemeCoteQueXParRapportAY> .
+_:genid41 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid41 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial> .
+_:genid41 <http://www.w3.org/2000/01/rdf-schema#comment> "RelativeNonProjectionAxial n'est pas défini très clairement dans l’ontologie de Bateman (contradiction entre définition/exemples donnés dans le papier et dans l’ontologie elle-même)."@fr .
+# 
+# http://www.purl.org/orl#EntreJalonsXEtYSurItineraire
+<http://www.purl.org/orl#EntreJalonsXEtYSurItineraire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#EntreJalonsXEtYSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#EntreXetY> .
+<http://www.purl.org/orl#EntreJalonsXEtYSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeItineraire> .
+<http://www.purl.org/orl#EntreJalonsXEtYSurItineraire> <http://www.w3.org/2000/01/rdf-schema#label> "Entre jalons X et Y sur itinéraire"@fr .
+<http://www.purl.org/orl#EntreJalonsXEtYSurItineraire> <http://www.w3.org/2000/01/rdf-schema#label> "La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), X et Y sont deux jalons connus de cet itinéraire, et la cible est située sur la portion de cet itinéraire délimitée par X et Y."@fr .
+# 
+# http://www.purl.org/orl#EntreXEtYAvecDetours
+<http://www.purl.org/orl#EntreXEtYAvecDetours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#EntreXEtYAvecDetours> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#EntreXetY> .
+<http://www.purl.org/orl#EntreXEtYAvecDetours> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#EntreXEtYAvecDetours> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#EntreXEtYAvecDetours> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette relation de localisation nécessite deux sites: X et Y. Cette relation de localisation indique que la cible est située quelque part \"sur un cheminement entre X et Y\", qui peut potentiellement être contraint par un réseau support non connu. De ce fait il y a une tolérance au dépassement dans l'axe du segment [XY], à une extrémité ou à l'autre, pour tenir compte des éventuels détours nécessaires selon le support du cheminement. Par ailleurs dans la direction orthogonale à l'axe [XY], la cible est a priori davantage susceptible d'être éloignée du segment à l'aplomb du milieu de celui-ci qu'à ses extrémités."@fr .
+<http://www.purl.org/orl#EntreXEtYAvecDetours> <http://www.w3.org/2000/01/rdf-schema#label> "Entre X et Y avec détours"@fr .
+# 
+# http://www.purl.org/orl#EntreXEtYEspaceIsotrope
+<http://www.purl.org/orl#EntreXEtYEspaceIsotrope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#EntreXEtYEspaceIsotrope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#EntreXetY> .
+<http://www.purl.org/orl#EntreXEtYEspaceIsotrope> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette relation de localisation nécessite deux sites : X et Y. La cible est située quelque part entre X et Y, et l'espace est isotrope, on ne prend donc pas en compte les éventuels détours de cheminement dûs à un réseau support. La cible est située à proximité du segment reliant X et Y. On considère que la cible peut s'en écarter d'autant plus que son projeté orthogonal sur le segment est proche de son milieu."@fr .
+<http://www.purl.org/orl#EntreXEtYEspaceIsotrope> <http://www.w3.org/2000/01/rdf-schema#label> "Entre X et Y en espace isotrope"@fr .
+# 
+# http://www.purl.org/orl#EntreXetY
+<http://www.purl.org/orl#EntreXetY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#EntreXetY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeTernaire> .
+<http://www.purl.org/orl#EntreXetY> <http://purl.org/vocab/vann/example> "Là on est dans le secteur entre… par les pistes forestières, entre cordéac et pellafol"@fr .
+<http://www.purl.org/orl#EntreXetY> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#EntreXetY> <http://www.w3.org/2000/01/rdf-schema#comment> "Il faut deux sites ici (X et Y). La cible est située entre les deux. Le cadre de référence est particulièrement important ici. Il faudra le modéliser pour pouvoir spatialiser une relation comme celle-là. Par exemple, si les deux sites peuvent être considérés comme de faible extension spatiale (donc assimilables à des ponctuels), le cadre de référence peut inclure un ou plusieurs tracés à une dimension qui relient les deux sites : tracé d’un itinéraire, etc. (ou une ligne droite en l’absence d’information). Si l’extension spatiale est plus importante, on peut définir une zone « entre les deux » comme dans le modèle 5IM (Clementini et Billen 2006). Mais attention aux cas déictiques comme « je vois Z entre X et Y » ou « nagez entre les deux poteaux » de Bateman et al. 2010."@fr .
+<http://www.purl.org/orl#EntreXetY> <http://www.w3.org/2000/01/rdf-schema#label> "Entre X et Y"@fr .
+<http://www.purl.org/orl#EntreXetY> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Distribution> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid42 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#EntreXetY> .
+_:genid42 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid42 <http://www.w3.org/2002/07/owl#annotatedTarget> "Là on est dans le secteur entre… par les pistes forestières, entre cordéac et pellafol"@fr .
+_:genid42 <http://purl.org/dc/terms/source> "Chute quad_extrait 1-2" .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid43 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#EntreXetY> .
+_:genid43 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid43 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Distribution> .
+_:genid43 <http://www.w3.org/2000/01/rdf-schema#comment> "« Distribution » semble s’appliquer au cas d’un seul objet de référence « collectif » (parmi la foule, entre les arbres). Le cas classique « entre X et Y » n’est pas traité de manière claire dans l’ontologie GUM-3-SPACE."@fr .
+# 
+# http://www.purl.org/orl#HorsDePlanimetrique
+<http://www.purl.org/orl#HorsDePlanimetrique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#HorsDePlanimetrique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDisjointe> .
+<http://www.purl.org/orl#HorsDePlanimetrique> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#HorsDePlanimetrique> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située en dehors de l’espace 2,5 D délimité par le site, qui est\ndonc considéré comme délimitant une région sur la surface terrestre. HorsDePlanimetrique est mutuellement exclusif avec DansPlanimetrique, mais n'en est pas le complémentaire (cf. ALaFrontiereDe, qui est compatible avec HorsDePlanimetrique, avec DansPlanimetrique, ou avec une situation ou ni l'un ni l'autre ne s'applique)."@fr .
+<http://www.purl.org/orl#HorsDePlanimetrique> <http://www.w3.org/2000/01/rdf-schema#label> "Hors de planimétrique"@fr .
+# 
+# http://www.purl.org/orl#PresDe
+<http://www.purl.org/orl#PresDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#PresDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeProximité> .
+<http://www.purl.org/orl#PresDe> <http://purl.org/vocab/vann/example> "vers midi, il était près du sommet et dans le brouillard"@fr .
+<http://www.purl.org/orl#PresDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#PresDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est \"proche\" du site (distance qualitative, forcément subjective), mais pas dans le site (DansPlanimetrique) si ce dernier a une emprise non ponctuelle. Par ailleurs la situation se différencie de la situation \"Proximal\" par la distance qui peut être un peu plus grande, et par l'absence de relation fonctionnelle. Enfin, DansPlanimetrique implique PresDe mais l'inverse n'est pas vrai."@fr .
+<http://www.purl.org/orl#PresDe> <http://www.w3.org/2000/01/rdf-schema#label> "Près de"@fr .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid44 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#PresDe> .
+_:genid44 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid44 <http://www.w3.org/2002/07/owl#annotatedTarget> "vers midi, il était près du sommet et dans le brouillard"@fr .
+_:genid44 <http://purl.org/dc/terms/source> "2015_8_14_15_58_31_0_8_48_ch1 6-1" .
+# 
+# http://www.purl.org/orl#Proximal
+<http://www.purl.org/orl#Proximal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#Proximal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeContact> .
+<http://www.purl.org/orl#Proximal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeFonctionelle> .
+<http://www.purl.org/orl#Proximal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeProximité> .
+<http://www.purl.org/orl#Proximal> <http://purl.org/vocab/vann/example> "Je suis sur un promontoire car le réseau ne passait pas."@fr .
+<http://www.purl.org/orl#Proximal> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#Proximal> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est dans le site ou à proximité immédiate, qui peut être une proximité fonctionnelle (exemple de la personne qui fait la queue à la poste dans Bateman et al. 2010)."@fr .
+<http://www.purl.org/orl#Proximal> <http://www.w3.org/2000/01/rdf-schema#label> "Proximal"@fr .
+<http://www.purl.org/orl#Proximal> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid45 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#Proximal> .
+_:genid45 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid45 <http://www.w3.org/2002/07/owl#annotatedTarget> "Je suis sur un promontoire car le réseau ne passait pas."@fr .
+_:genid45 <http://purl.org/dc/terms/source> "Cornafion 4-2" .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid46 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#Proximal> .
+_:genid46 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid46 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal> .
+_:genid46 <http://www.w3.org/2000/01/rdf-schema#comment> "Bateman et al. définissent seulement « proximal » et « distal », qu’ils opposent. Nous avons introduit en plus:\n- « AuxAlentoursDe » = trop loin pour être considéré comme « très proche », mais suffisamment proche pour que se repérer par rapport à ce site ait quand même un sens\n-et « PresDe » = proche, sans être exactement au niveau du site.\nDu coup, petit doute sur le fait que le « Proximal » de Bateman et al. ne couvre pas une partie de notre « PresDe » et/ou de notre « AuxAlentoursDe »."@fr .
+_:genid46 <http://www.w3.org/2000/01/rdf-schema#comment> "Selon l’échelle considérée, et le « mode d’implantation conceptuel » du site associé (région ou assimilé ponctuel), cet indice pourrait être associé une relation « Parthood » plutôt que « Proximal » au sens de Bateman."@fr .
+# 
+# http://www.purl.org/orl#RelationDeLocalisation
+<http://www.purl.org/orl#RelationDeLocalisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationDeLocalisation> <http://www.purl.org/orl#abbreviation> "l. r."@en .
+<http://www.purl.org/orl#RelationDeLocalisation> <http://www.purl.org/orl#abbreviation> "r.l."@fr .
+<http://www.purl.org/orl#RelationDeLocalisation> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationDeLocalisation> <http://www.w3.org/2000/01/rdf-schema#label> "Relation de localisation"@fr .
+<http://www.purl.org/orl#RelationDeLocalisation> <http://www.w3.org/2000/01/rdf-schema#label> "location relationship"@en .
+# 
+# http://www.purl.org/orl#RelationSpatialeDeCardinalité
+<http://www.purl.org/orl#RelationSpatialeDeCardinalité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeDeCardinalité> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeDeDirection> .
+<http://www.purl.org/orl#RelationSpatialeDeCardinalité> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeDeCardinalité> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale de cardinalité"@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeDeContact
+<http://www.purl.org/orl#RelationSpatialeDeContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeDeContact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialePositionRelative> .
+<http://www.purl.org/orl#RelationSpatialeDeContact> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeDeContact> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale de contact"@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeDeDirection
+<http://www.purl.org/orl#RelationSpatialeDeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeDeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialePositionRelative> .
+<http://www.purl.org/orl#RelationSpatialeDeDirection> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeDeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale de direction"@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeDisjointe
+<http://www.purl.org/orl#RelationSpatialeDisjointe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeDisjointe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialePositionRelative> .
+<http://www.purl.org/orl#RelationSpatialeDisjointe> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeDisjointe> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale disjointe"@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeFonctionelle
+<http://www.purl.org/orl#RelationSpatialeFonctionelle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeFonctionelle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationDeLocalisation> .
+<http://www.purl.org/orl#RelationSpatialeFonctionelle> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeFonctionelle> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale fonctionelle"@fr .
+<http://www.purl.org/orl#RelationSpatialeFonctionelle> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#FunctionalSpatialModality> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid47 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#RelationSpatialeFonctionelle> .
+_:genid47 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid47 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#FunctionalSpatialModality> .
+_:genid47 <http://www.w3.org/2000/01/rdf-schema#comment> "Sémantiquement la classe RelationSpatialeFonctionnelle est quasi équivalente à la classe FunctionalSpatialeModality de GUM-3-SPACE."@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeItineraire
+<http://www.purl.org/orl#RelationSpatialeItineraire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialePositionRelative> .
+<http://www.purl.org/orl#RelationSpatialeItineraire> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeItineraire> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale itinéraire"@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialePositionRelative
+<http://www.purl.org/orl#RelationSpatialePositionRelative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialePositionRelative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationDeLocalisation> .
+<http://www.purl.org/orl#RelationSpatialePositionRelative> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialePositionRelative> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale position relative"@fr .
+<http://www.purl.org/orl#RelationSpatialePositionRelative> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeSpatialModality> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid48 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#RelationSpatialePositionRelative> .
+_:genid48 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid48 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeSpatialModality> .
+_:genid48 <http://www.w3.org/2000/01/rdf-schema#comment> "Sémantiquement la classe RelationSpatialePositionRelative est quasi équivalente à la classe RelativeSpatialeModality de GUM-3-SPACE."@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeProximité
+<http://www.purl.org/orl#RelationSpatialeProximité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeProximité> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationDeLocalisation> .
+<http://www.purl.org/orl#RelationSpatialeProximité> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeProximité> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale de proximité"@fr .
+<http://www.purl.org/orl#RelationSpatialeProximité> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SpatialDistanceModality> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid49 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#RelationSpatialeProximité> .
+_:genid49 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid49 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SpatialDistanceModality> .
+_:genid49 <http://www.w3.org/2000/01/rdf-schema#comment> "Sémantiquement la classe RelationSpatialeProximité est quasi équivalente à la classe SpatialeDistanceModality de GUM-3-SPACE."@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeTernaire
+<http://www.purl.org/orl#RelationSpatialeTernaire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeTernaire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialePositionRelative> .
+<http://www.purl.org/orl#RelationSpatialeTernaire> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeTernaire> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale ternaire"@fr .
+# 
+# http://www.purl.org/orl#RelationSpatialeVerticale
+<http://www.purl.org/orl#RelationSpatialeVerticale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#RelationSpatialeVerticale> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialePositionRelative> .
+<http://www.purl.org/orl#RelationSpatialeVerticale> <http://www.purl.org/orl#atAbstractClass> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#RelationSpatialeVerticale> <http://www.w3.org/2000/01/rdf-schema#label> "Relation spatiale verticale"@fr .
+# 
+# http://www.purl.org/orl#SiteVoitCible
+<http://www.purl.org/orl#SiteVoitCible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#SiteVoitCible> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationDeLocalisation> .
+<http://www.purl.org/orl#SiteVoitCible> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#SiteVoitCible> <http://www.w3.org/2000/01/rdf-schema#comment> "Le site voit la cible (vision active). La position de l'objet à localiser (ex. la victime) est visible depuis une autre position connue (ex. un refuge depuis lequel  un témoin contacte les secours)."@fr .
+<http://www.purl.org/orl#SiteVoitCible> <http://www.w3.org/2000/01/rdf-schema#label> "Site voit Cible"@fr .
+# 
+# http://www.purl.org/orl#SitueSurItineraireOuReseauSupport
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeFonctionelle> .
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeItineraire> .
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://purl.org/vocab/vann/example> "On est sur le GR 54."@fr .
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible se situe sur un réseau ou un itinéraire. Le « sur » a ici un sens fonctionnel. Le site peut être un élément de réseau au sens large : réseau parcourable à pied, réseau de pistes de ski, voies d’escalade ou d’alpinisme, réseau hydro (par ex. en kayak ou canyoning), itinéraire de ski de rando… Aucun a priori n’est considéré sur la modélisation géométrique du réseau dans les données. Il n’y a pas nécessairement de connexion topologique entre la cible et le site : la cible peut se trouver de faite légèrement éloignée de l’élément de réseau (ex : cas d’une aire de pique-nique accesible depuis le réseau de randonnée pédestre)."@fr .
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://www.w3.org/2000/01/rdf-schema#label> "Situé sur itinéraire ou réseau support"@fr .
+<http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#PathRepresentingInternal> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid50 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> .
+_:genid50 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid50 <http://www.w3.org/2002/07/owl#annotatedTarget> "On est sur le GR 54."@fr .
+_:genid50 <http://purl.org/dc/terms/source> "GR54 1-1" .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid51 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#SitueSurItineraireOuReseauSupport> .
+_:genid51 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid51 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#PathRepresentingInternal> .
+_:genid51 <http://www.w3.org/2000/01/rdf-schema#comment> "Différe un peu de PathRepresentingInternal de Bateman, car notre définition est fonctionelle : elle inclut le cas d'un objet situé dans les alentours immédiats du réseau, mais lié fonctionnellement (ex: cas de l'aire de pique-nique de la définition)."@fr .
+# 
+# http://www.purl.org/orl#SousALAplombDe
+<http://www.purl.org/orl#SousALAplombDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#SousALAplombDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#SousALAplombDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#SousALAplombDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est à une altitude inférieure à celle du site et le site est plus ou moins situé sur la ligne de plus grande pente qui passe par la cible, ou inversement . Typiquement, site et cible appartiennent à une même vallée (ce qui pose un problème de niveau de granularité) et sont situés à peu près au même niveau longitudinalement.\nNB : il n'est pas facile de calculer la ligne de plus grande pente passant par la cible sans connaître la localisation de la cible, alors que par définition la localisation de la cible n'est pas forcément connue... Pourtant, si le site est en fond de vallée c’est bien le site qui est situé sur la ligne de plus grande pente passant par la cible, et non l’inverse."@fr .
+<http://www.purl.org/orl#SousALAplombDe> <http://www.w3.org/2000/01/rdf-schema#label> "Sous à l'aplomb de"@fr .
+<http://www.purl.org/orl#SousALAplombDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal> .
+# 
+# http://www.purl.org/orl#SousAltitude
+<http://www.purl.org/orl#SousAltitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#SousAltitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#SousAltitude> <http://purl.org/vocab/vann/example> "je pense pas qu'ils soient passés par les vires en-dessous"@fr .
+<http://www.purl.org/orl#SousAltitude> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#SousAltitude> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible a une altitude inférieure à celle du site. Sa distance au site n’est pas contrainte."@fr .
+<http://www.purl.org/orl#SousAltitude> <http://www.w3.org/2000/01/rdf-schema#label> "Sous altitude"@fr .
+<http://www.purl.org/orl#SousAltitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjection> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid52 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#SousAltitude> .
+_:genid52 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid52 <http://www.w3.org/2002/07/owl#annotatedTarget> "je pense pas qu'ils soient passés par les vires en-dessous"@fr .
+_:genid52 <http://purl.org/dc/terms/source> "Rateau 4-2" .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid53 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#SousAltitude> .
+_:genid53 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+_:genid53 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjection> .
+_:genid53 <http://www.w3.org/2000/01/rdf-schema#comment> "Le concept AuDessusAltitude n’impose pas que la cible soit située à l’intérieur ou à l’extérieur du site, par conséquent le concept le plus proche dans l’ontologie de Bateman et le BelowProjection. Pas certain pourtant que les deux concepts soient parfaitement équivalents."@fr .
+# 
+# http://www.purl.org/orl#SousJalonSurItineraire
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeItineraire> .
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://purl.org/vocab/vann/example> "on est sous le déversoir du lac de belledonne"@fr .
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), et en-dessous (au sens de l'altitude) du site qui est un jalon de cet itinéraire."@fr .
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#label> "Sous jalon sur itinéraire"@fr .
+<http://www.purl.org/orl#SousJalonSurItineraire> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid54 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#SousJalonSurItineraire> .
+_:genid54 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid54 <http://www.w3.org/2002/07/owl#annotatedTarget> "on est sous le déversoir du lac de belledonne"@fr .
+_:genid54 <http://purl.org/dc/terms/source> "Rando pedestre Belledonne 1-1" .
+# 
+# http://www.purl.org/orl#SousProcheDe
+<http://www.purl.org/orl#SousProcheDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#SousProcheDe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#SousProcheDe> <http://purl.org/vocab/vann/example> "On est à 100 m ou 150, ou 200 m du col, vraiment juste en-dessous"@fr .
+<http://www.purl.org/orl#SousProcheDe> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#SousProcheDe> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est proche et a une altitude inférieure à celle du site."@fr .
+<http://www.purl.org/orl#SousProcheDe> <http://www.w3.org/2000/01/rdf-schema#label> "Sous et proche de"@fr .
+<http://www.purl.org/orl#SousProcheDe> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid55 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#SousProcheDe> .
+_:genid55 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid55 <http://www.w3.org/2002/07/owl#annotatedTarget> "On est à 100 m ou 150, ou 200 m du col, vraiment juste en-dessous"@fr .
+_:genid55 <http://purl.org/dc/terms/source> "Col de la mine de fer 8-2" .
+# 
+# http://www.purl.org/orl#SousRecouvertPar
+<http://www.purl.org/orl#SousRecouvertPar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/orl#SousRecouvertPar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/orl#RelationSpatialeVerticale> .
+<http://www.purl.org/orl#SousRecouvertPar> <http://purl.org/vocab/vann/example> "avec un mec coincé sous un arbre"@fr .
+<http://www.purl.org/orl#SousRecouvertPar> <http://www.purl.org/orl#atAbstractClass> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.purl.org/orl#SousRecouvertPar> <http://www.w3.org/2000/01/rdf-schema#comment> "La cible est sous le site et elle est recouverte par ce dernier (ex. \"je suis sous un pont\")"@fr .
+<http://www.purl.org/orl#SousRecouvertPar> <http://www.w3.org/2000/01/rdf-schema#label> "Sous recouvert par"@fr .
+<http://www.purl.org/orl#SousRecouvertPar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid56 <http://www.w3.org/2002/07/owl#annotatedSource> <http://www.purl.org/orl#SousRecouvertPar> .
+_:genid56 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.org/vocab/vann/example> .
+_:genid56 <http://www.w3.org/2002/07/owl#annotatedTarget> "avec un mec coincé sous un arbre"@fr .
+_:genid56 <http://purl.org/dc/terms/source> "bucheron izeron_extrait 4-1" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
