@@ -1,6 +1,22 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Grand Veymont 8-1"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://purl.org/vocab/vann/example"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://purl.org/orl#ADistanceQuantitativePlanimetriqueDe"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@language" : "fr",
+    "@value" : "j'estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d'oiseau"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
   } ],
@@ -8,93 +24,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"
+    "@id" : "http://purl.org/orl#ALOuestDeExterne"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#ALEstDe"
-  } ]
-}, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@value" : "Meije 17 juin 3-1"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://purl.org/vocab/vann/example"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ADistanceQuantitativeRelativeDe"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@language" : "fr",
-    "@value" : "et lui est à une longueur en-dessous (du dos d'âne), donc à une petite longueur du haut du couloir de la Meije"
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"
   } ]
 }, {
   "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@value" : "Les Adrets 5-1"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://purl.org/vocab/vann/example"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ADroiteDe"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@language" : "fr",
-    "@value" : "sur la droite quand on regarde le haut de la station."
-  } ]
-}, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@value" : "Parapente 2-1"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://purl.org/vocab/vann/example"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AGaucheDe"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@language" : "fr",
-    "@value" : "Juste sur la gauche, il y a une autre dent, je ne sais pas comment elle s’appelle."
-  } ]
-}, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@value" : "Malaise bastille 4-2"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://purl.org/vocab/vann/example"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ALExtremiteDe"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@language" : "fr",
-    "@value" : "Il est à l'extrémité ouest d'une espèce de terrasse en béton."
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@value" : "Grande Sure 4-1"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://purl.org/vocab/vann/example"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDe"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@language" : "fr",
-    "@value" : "oui, et là on est à l'Ouest (grande Sure, rochers de Lorzier)."
-  } ]
-}, {
-  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Cornafion 7-1"
@@ -103,14 +39,14 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDeExterne"
+    "@id" : "http://purl.org/orl#ALOuestDeExterne"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur"
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Moucherotte 25-1"
@@ -119,14 +55,14 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ALaFrontiereDe"
+    "@id" : "http://purl.org/orl#ALaFrontiereDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "Je suis un peu à la sortie de la forêt."
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "2 alpes_extrait 3-1"
@@ -135,14 +71,14 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ALaMemeAltitudeQue"
+    "@id" : "http://purl.org/orl#ALaMemeAltitudeQue"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "c’est à 2300 mètres d’altitude"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -152,13 +88,13 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ALaMemeAltitudeQue"
+    "@id" : "http://purl.org/orl#ALaMemeAltitudeQue"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#HeightNonProjectionAxial"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Malaise Bastille 1-1"
@@ -167,29 +103,14 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ATempsDeMarcheDe"
+    "@id" : "http://purl.org/orl#ATempsDeMarcheDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "on est à 10 minutes du sommet de la Bastille"
   } ]
 }, {
-  "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#ALEstDeExterne"
-  } ]
-}, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Col du Sabot 3-1"
@@ -198,14 +119,14 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ApresJalonSurItineraire"
+    "@id" : "http://purl.org/orl#ApresJalonSurItineraire"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "après le parking de la Villette."
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Col de Bellefond 3-1"
@@ -214,14 +135,14 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuDessusDeAltitude"
+    "@id" : "http://purl.org/orl#AuDessusDeAltitude"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "Au-dessus de Percolin, y’a la cabane du berger de Bellefont et on est 50 mètres au-dessus"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -231,13 +152,13 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuDessusDeAltitude"
+    "@id" : "http://purl.org/orl#AuDessusDeAltitude"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjection"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Cascade de l'oursière 1-3"
@@ -246,14 +167,30 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuDessusDeJalonSurItineraire"
+    "@id" : "http://purl.org/orl#AuDessusDeJalonSurItineraire"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "...sur le sentier qui mène à la cascade de l’oursière, au-dessus de la cascade de l’oursière"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Meije 17 juin 3-1"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://purl.org/vocab/vann/example"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://purl.org/orl#ADistanceQuantitativeRelativeDe"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@language" : "fr",
+    "@value" : "et lui est à une longueur en-dessous (du dos d'âne), donc à une petite longueur du haut du couloir de la Meije"
+  } ]
+}, {
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Saint Pancrasse 4-1"
@@ -262,14 +199,44 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuDessusProcheDe"
+    "@id" : "http://purl.org/orl#AuDessusProcheDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "juste au-dessus de Bernin"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://purl.org/orl#AuNordDe"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://purl.org/orl#AuNordDeExterne"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"
+  } ]
+}, {
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "Grand Veymont 3-1"
@@ -278,11 +245,41 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuNordDeExterne"
+    "@id" : "http://purl.org/orl#AuNordDeExterne"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
     "@value" : "non, côté Nord (du Pas de la Ville), pardon."
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://purl.org/orl#AuSudDe"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://purl.org/orl#AuSudDeExterne"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"
   } ]
 }, {
   "@id" : "_:genid26",
@@ -294,7 +291,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuSudDeExterne"
+    "@id" : "http://purl.org/orl#AuSudDeExterne"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -310,7 +307,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuxAlentoursDe"
+    "@id" : "http://purl.org/orl#AuxAlentoursDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -330,7 +327,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AuxAlentoursDe"
+    "@id" : "http://purl.org/orl#AuxAlentoursDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal"
@@ -345,7 +342,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#AvoirDevantSoi"
+    "@id" : "http://purl.org/orl#AvoirDevantSoi"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -354,17 +351,18 @@
 }, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Les Adrets 5-1"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+    "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North"
+    "@id" : "http://purl.org/orl#ADroiteDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#AuNordDe"
+    "@language" : "fr",
+    "@value" : "sur la droite quand on regarde le haut de la station."
   } ]
 }, {
   "@id" : "_:genid30",
@@ -376,7 +374,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#CibleVoitSite"
+    "@id" : "http://purl.org/orl#CibleVoitSite"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -392,7 +390,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY"
+    "@id" : "http://purl.org/orl#DansLaPartieDeXLaPlusProcheDeY"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -409,7 +407,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DansLaPartieEstDe"
+    "@id" : "http://purl.org/orl#DansLaPartieEstDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastInternal"
@@ -425,7 +423,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DansLaPartieNordDe"
+    "@id" : "http://purl.org/orl#DansLaPartieNordDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthInternal"
@@ -440,7 +438,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DansLaPartieOuestDe"
+    "@id" : "http://purl.org/orl#DansLaPartieOuestDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -457,7 +455,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DansLaPartieOuestDe"
+    "@id" : "http://purl.org/orl#DansLaPartieOuestDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestInternal"
@@ -473,7 +471,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DansLaPartieSudDe"
+    "@id" : "http://purl.org/orl#DansLaPartieSudDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthInternal"
@@ -488,7 +486,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -504,7 +502,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DeAutreCoteDeXParRapportAY"
+    "@id" : "http://purl.org/orl#DeAutreCoteDeXParRapportAY"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -521,7 +519,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DeAutreCoteDeXParRapportAY"
+    "@id" : "http://purl.org/orl#DeAutreCoteDeXParRapportAY"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"
@@ -529,17 +527,18 @@
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Parapente 2-1"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+    "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"
+    "@id" : "http://purl.org/orl#AGaucheDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#AuNordDeExterne"
+    "@language" : "fr",
+    "@value" : "Juste sur la gauche, il y a une autre dent, je ne sais pas comment elle s’appelle."
   } ]
 }, {
   "@id" : "_:genid40",
@@ -551,7 +550,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DuMemeCoteQueXParRapportAY"
+    "@id" : "http://purl.org/orl#DuMemeCoteQueXParRapportAY"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -568,7 +567,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#DuMemeCoteQueXParRapportAY"
+    "@id" : "http://purl.org/orl#DuMemeCoteQueXParRapportAY"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"
@@ -583,7 +582,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#EntreXetY"
+    "@id" : "http://purl.org/orl#EntreXetY"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -600,7 +599,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#EntreXetY"
+    "@id" : "http://purl.org/orl#EntreXetY"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Distribution"
@@ -615,7 +614,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#PresDe"
+    "@id" : "http://purl.org/orl#PresDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -631,7 +630,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#Proximal"
+    "@id" : "http://purl.org/orl#Proximal"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -651,7 +650,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#Proximal"
+    "@id" : "http://purl.org/orl#Proximal"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal"
@@ -667,7 +666,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeFonctionelle"
+    "@id" : "http://purl.org/orl#RelationSpatialeFonctionelle"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#FunctionalSpatialModality"
@@ -683,7 +682,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative"
+    "@id" : "http://purl.org/orl#RelationSpatialePositionRelative"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeSpatialModality"
@@ -699,7 +698,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SpatialDistanceModality"
@@ -714,10 +713,10 @@
     "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South"
+    "@id" : "http://purl.org/orl#ALEstDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#AuSudDe"
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"
   } ]
 }, {
   "@id" : "_:genid50",
@@ -729,7 +728,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#SitueSurItineraireOuReseauSupport"
+    "@id" : "http://purl.org/orl#SitueSurItineraireOuReseauSupport"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -746,7 +745,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#SitueSurItineraireOuReseauSupport"
+    "@id" : "http://purl.org/orl#SitueSurItineraireOuReseauSupport"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#PathRepresentingInternal"
@@ -761,7 +760,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#SousAltitude"
+    "@id" : "http://purl.org/orl#SousAltitude"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -778,7 +777,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#SousAltitude"
+    "@id" : "http://purl.org/orl#SousAltitude"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjection"
@@ -793,7 +792,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#SousJalonSurItineraire"
+    "@id" : "http://purl.org/orl#SousJalonSurItineraire"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -809,7 +808,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#SousProcheDe"
+    "@id" : "http://purl.org/orl#SousProcheDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -825,7 +824,7 @@
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#SousRecouvertPar"
+    "@id" : "http://purl.org/orl#SousRecouvertPar"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
@@ -841,25 +840,26 @@
     "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"
+    "@id" : "http://purl.org/orl#ALEstDeExterne"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#AuSudDeExterne"
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"
   } ]
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Nous reprenons exactement la hiérarchie de Bateman et al. (2010) pour les directions cardinales (ce qui est sous « CardinalDirectional » dans l’ontologie GUM-3-Space), SAUF que nous ne considérerons pas que NorthInternal, SouthInternal, WestInternal, EastInternal sont des sous-concept de Disjointness, contrairement à GUM-3-Space dans laquelle c'est le cas par transitivité puisque toutes les relations de direction, dont les relations cardinales, héritent de Disjointness (mais c'est sans doute une erreur dans GUM-3-SPACE)."
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "Malaise bastille 4-2"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+    "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"
+    "@id" : "http://purl.org/orl#ALExtremiteDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDe"
+    "@language" : "fr",
+    "@value" : "Il est à l'extrémité ouest d'une espèce de terrasse en béton."
   } ]
 }, {
   "@id" : "_:genid8",
@@ -871,26 +871,26 @@
     "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"
+    "@id" : "http://purl.org/orl#ALOuestDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDeExterne"
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"
   } ]
 }, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "Grand Veymont 8-1"
+    "@value" : "Grande Sure 4-1"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
     "@id" : "http://purl.org/vocab/vann/example"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe"
+    "@id" : "http://purl.org/orl#ALOuestDe"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@language" : "fr",
-    "@value" : "j'estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d'oiseau"
+    "@value" : "oui, et là on est à l'Ouest (grande Sure, rochers de Lorzier)."
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#license",
@@ -926,58 +926,7 @@
   "@id" : "http://purl.org/dc/terms/source",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/vocab/vann/example",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#ALEstDe"
-  } ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#ALEstDeExterne"
-  } ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#AuNordDe"
-  } ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#AuNordDeExterne"
-  } ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#AuSudDe"
-  } ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#AuSudDeExterne"
-  } ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDe"
-  } ]
-}, {
-  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDeExterne"
-  } ]
-}, {
-  "@id" : "http://www.purl.org/orl",
+  "@id" : "http://purl.org/orl",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://creativecommons.org/ns#license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
@@ -997,7 +946,7 @@
     "@value" : "The Locating relationships ontology (ORL ontology) is an application ontology dedicated to locating victims in mountainous zones during a phone call with rescue services. In such circumstances, the location of the victim is often described by means of relations we call \"locating relations\" with landmark objects, for instance \"I am below the summit\", \"I see a lake\". The ORL ontology was defined in the context of the research project CHOUCAS, funded by the French National Research Agency (choucas.ign.fr). Its purpose is to identify and organise locating relations used to get ones bearings in mountainous areas. A number of locating relations described in this ontology are equivalent or close to concepts described in the GUM-3-SPACE ontology by Bateman et al (2010). This equivalences and proximities are reported as much as possible by means equivalentClass and seeAlso properties on the concepts. \n\nThe ORL ontology is in French only at this time."
   } ],
   "http://purl.org/dc/elements/1.1/issued" : [ {
-    "@value" : "2023-05-26"
+    "@value" : "2021-09-03"
   } ],
   "http://purl.org/dc/elements/1.1/language" : [ {
     "@value" : "fr-fr"
@@ -1018,6 +967,12 @@
   "http://purl.org/dc/terms/created" : [ {
     "@value" : "2020-02-07"
   } ],
+  "http://purl.org/vocab/vann/#preferredNamespacePrefix" : [ {
+    "@value" : "orl"
+  } ],
+  "http://purl.org/vocab/vann/#preferredNamespaceUri" : [ {
+    "@id" : "http://www.purl.org/orl"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/oac"
   }, {
@@ -1037,22 +992,17 @@
   }, {
     "@language" : "fr",
     "@value" : "1.1"
-  } ],
-  "https://vocab.org/vann/preferredNamespaceUri" : [ {
-    "@id" : "http://www.purl.org/orl"
-  }, {
-    "@value" : "orl"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ADistanceQuantitativePlanimetriqueDe",
+  "@id" : "http://purl.org/orl#ADistanceQuantitativePlanimetriqueDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "j'estime à 800 m (du Pas de la Ville) je crois, à peu près, à vol d'oiseau"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1066,18 +1016,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#QuantitativeDistance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ADistanceQuantitativeRelativeDe",
+  "@id" : "http://purl.org/orl#ADistanceQuantitativeRelativeDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "et lui est à une longueur en-dessous (du dos d'âne), donc à une petite longueur du haut du couloir de la Meije"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1088,12 +1038,12 @@
     "@value" : "À distance quantitative relative de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ADistanceTempsDe",
+  "@id" : "http://purl.org/orl#ADistanceTempsDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1106,10 +1056,10 @@
     "@value" : "À distance temps de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ADistanceTempsDepuis",
+  "@id" : "http://purl.org/orl#ADistanceTempsDepuis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1120,10 +1070,10 @@
     "@value" : "À distance temps depuis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ADistanceTempsDe"
+    "@id" : "http://purl.org/orl#ADistanceTempsDe"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ADistanceTempsVers",
+  "@id" : "http://purl.org/orl#ADistanceTempsVers",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1134,18 +1084,18 @@
     "@value" : "À distance temps vers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ADistanceTempsDe"
+    "@id" : "http://purl.org/orl#ADistanceTempsDe"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ADroiteDe",
+  "@id" : "http://purl.org/orl#ADroiteDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "sur la droite quand on regarde le haut de la station."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1156,18 +1106,18 @@
     "@value" : "À droite de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AGaucheDe",
+  "@id" : "http://purl.org/orl#AGaucheDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Juste sur la gauche, il y a une autre dent, je ne sais pas comment elle s’appelle."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1178,12 +1128,12 @@
     "@value" : "À gauche de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ALEstDe",
+  "@id" : "http://purl.org/orl#ALEstDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1196,12 +1146,15 @@
     "@value" : "À l'est de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeCardinalité"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeCardinalité"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ALEstDeExterne",
+  "@id" : "http://purl.org/orl#ALEstDeExterne",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1214,20 +1167,23 @@
     "@value" : "À l'est de externe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ALEstDe"
+    "@id" : "http://purl.org/orl#ALEstDe"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDisjointe"
+    "@id" : "http://purl.org/orl#RelationSpatialeDisjointe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ALExtremiteDe",
+  "@id" : "http://purl.org/orl#ALExtremiteDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Il est à l'extrémité ouest d'une espèce de terrasse en béton."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1241,18 +1197,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Peripheral"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeContact"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeContact"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ALOuestDe",
+  "@id" : "http://purl.org/orl#ALOuestDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "oui, et là on est à l'Ouest (grande Sure, rochers de Lorzier)."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1263,18 +1219,21 @@
     "@value" : "À l'ouest de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeCardinalité"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeCardinalité"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ALOuestDeExterne",
+  "@id" : "http://purl.org/orl#ALOuestDeExterne",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "[par rapport à la ligne de crête], on est versant ouest, côté vercors intérieur"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1285,20 +1244,23 @@
     "@value" : "À l'ouest de externe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDe"
+    "@id" : "http://purl.org/orl#ALOuestDe"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDisjointe"
+    "@id" : "http://purl.org/orl#RelationSpatialeDisjointe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ALaFrontiereDe",
+  "@id" : "http://purl.org/orl#ALaFrontiereDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Je suis un peu à la sortie de la forêt."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Peripheral"
@@ -1311,18 +1273,18 @@
     "@value" : "À la frontière de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeContact"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeContact"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ALaMemeAltitudeQue",
+  "@id" : "http://purl.org/orl#ALaMemeAltitudeQue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "c’est à 2300 mètres d’altitude"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1336,18 +1298,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#HeightNonProjectionAxial"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ATempsDeMarcheDe",
+  "@id" : "http://purl.org/orl#ATempsDeMarcheDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "on est à 10 minutes du sommet de la Bastille"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1358,10 +1320,10 @@
     "@value" : "À temps de marche de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ADistanceTempsDe"
+    "@id" : "http://purl.org/orl#ADistanceTempsDe"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ATempsDeMarcheDepuis",
+  "@id" : "http://purl.org/orl#ATempsDeMarcheDepuis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "La cible est à tel temps de marche du site, en marchant depuis le site vers la cible. (temps de marche en propriété de la relation)."
@@ -1371,10 +1333,10 @@
     "@value" : "À temps de marche depuis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ATempsDeMarcheDe"
+    "@id" : "http://purl.org/orl#ATempsDeMarcheDe"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ATempsDeMarcheVers",
+  "@id" : "http://purl.org/orl#ATempsDeMarcheVers",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1385,18 +1347,18 @@
     "@value" : "À temps de marche vers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ATempsDeMarcheDe"
+    "@id" : "http://purl.org/orl#ATempsDeMarcheDe"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#ApresJalonSurItineraire",
+  "@id" : "http://purl.org/orl#ApresJalonSurItineraire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "après le parking de la Villette."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1407,12 +1369,12 @@
     "@value" : "Après un jalon sur itinéraire"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeItineraire"
+    "@id" : "http://purl.org/orl#RelationSpatialeItineraire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuDessusALAplombDe",
+  "@id" : "http://purl.org/orl#AuDessusALAplombDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1425,18 +1387,18 @@
     "@value" : "Au-dessus à l'aplomb de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuDessusDeAltitude",
+  "@id" : "http://purl.org/orl#AuDessusDeAltitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Au-dessus de Percolin, y’a la cabane du berger de Bellefont et on est 50 mètres au-dessus"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1450,18 +1412,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuDessusDeJalonSurItineraire",
+  "@id" : "http://purl.org/orl#AuDessusDeJalonSurItineraire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "...sur le sentier qui mène à la cascade de l’oursière, au-dessus de la cascade de l’oursière"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1475,20 +1437,20 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjectionExternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeItineraire"
+    "@id" : "http://purl.org/orl#RelationSpatialeItineraire"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuDessusProcheDe",
+  "@id" : "http://purl.org/orl#AuDessusProcheDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "juste au-dessus de Bernin"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1502,12 +1464,12 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#AboveProjectionExternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuMilieuDe",
+  "@id" : "http://purl.org/orl#AuMilieuDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1518,12 +1480,12 @@
     "@value" : "Au milieu de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeContact"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeContact"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuNordDe",
+  "@id" : "http://purl.org/orl#AuNordDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1536,18 +1498,21 @@
     "@value" : "Au nord de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeCardinalité"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeCardinalité"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuNordDeExterne",
+  "@id" : "http://purl.org/orl#AuNordDeExterne",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "non, côté Nord (du Pas de la Ville), pardon."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1558,14 +1523,17 @@
     "@value" : "Au nord de externe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#AuNordDe"
+    "@id" : "http://purl.org/orl#AuNordDe"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDisjointe"
+    "@id" : "http://purl.org/orl#RelationSpatialeDisjointe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuSudDe",
+  "@id" : "http://purl.org/orl#AuSudDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1578,18 +1546,21 @@
     "@value" : "Au sud de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeCardinalité"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeCardinalité"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuSudDeExterne",
+  "@id" : "http://purl.org/orl#AuSudDeExterne",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "je suis entre le grand veymont (sous le grand veymont) et Pas de la Ville, tout à fait, coté sud."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1600,20 +1571,23 @@
     "@value" : "Au sud de externe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#AuSudDe"
+    "@id" : "http://purl.org/orl#AuSudDe"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDisjointe"
+    "@id" : "http://purl.org/orl#RelationSpatialeDisjointe"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AuxAlentoursDe",
+  "@id" : "http://purl.org/orl#AuxAlentoursDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "dans le massif de la chartreuse"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1627,12 +1601,12 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AvantJalonSurItineraire",
+  "@id" : "http://purl.org/orl#AvantJalonSurItineraire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1645,12 +1619,12 @@
     "@value" : "Avant un jalon sur itinéraire"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeItineraire"
+    "@id" : "http://purl.org/orl#RelationSpatialeItineraire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AvoirASaDroite",
+  "@id" : "http://purl.org/orl#AvoirASaDroite",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1663,12 +1637,12 @@
     "@value" : "Avoir à sa droite"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AvoirASaGauche",
+  "@id" : "http://purl.org/orl#AvoirASaGauche",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1681,12 +1655,12 @@
     "@value" : "Avoir à sa gauche"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AvoirDerriereSoi",
+  "@id" : "http://purl.org/orl#AvoirDerriereSoi",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1699,18 +1673,18 @@
     "@value" : "Avoir derrière soi"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#AvoirDevantSoi",
+  "@id" : "http://purl.org/orl#AvoirDevantSoi",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "devant moi j’ai la plaine, et à gauche j’ai quand même des sapins."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1721,18 +1695,18 @@
     "@value" : "Avoir devant soi"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#CibleVoitSite",
+  "@id" : "http://purl.org/orl#CibleVoitSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Je suis vraiment en montagne, je vois les plaines, je vois un grand découvert devant moi."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1743,10 +1717,10 @@
     "@value" : "Cible voit Site"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationDeLocalisation"
+    "@id" : "http://purl.org/orl#RelationDeLocalisation"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope",
+  "@id" : "http://purl.org/orl#DansLaDirectionDeXDepuisYEspaceIsotrope",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1757,14 +1731,14 @@
     "@value" : "Dans la direction de X depuis Y en espace isotrope"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeCardinalité"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeCardinalité"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeTernaire"
+    "@id" : "http://purl.org/orl#RelationSpatialeTernaire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaPartieBasseDe",
+  "@id" : "http://purl.org/orl#DansLaPartieBasseDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1777,20 +1751,20 @@
     "@value" : "Dans la partie basse de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaPartieDeXLaPlusProcheDeY",
+  "@id" : "http://purl.org/orl#DansLaPartieDeXLaPlusProcheDeY",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Dans la Combe de la Glière côté télésiège…"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1801,14 +1775,14 @@
     "@value" : "Dans la partie de X la plus proche de Y"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeTernaire"
+    "@id" : "http://purl.org/orl#RelationSpatialeTernaire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaPartieEstDe",
+  "@id" : "http://purl.org/orl#DansLaPartieEstDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1824,14 +1798,14 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastInternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ALEstDe"
+    "@id" : "http://purl.org/orl#ALEstDe"
   }, {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaPartieHauteDe",
+  "@id" : "http://purl.org/orl#DansLaPartieHauteDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1844,14 +1818,14 @@
     "@value" : "Dans la partie haute de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaPartieNordDe",
+  "@id" : "http://purl.org/orl#DansLaPartieNordDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1867,20 +1841,20 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthInternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#AuNordDe"
+    "@id" : "http://purl.org/orl#AuNordDe"
   }, {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaPartieOuestDe",
+  "@id" : "http://purl.org/orl#DansLaPartieOuestDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "il est à l'extrémité ouest d'une espèce de terrasse en béton."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1894,14 +1868,14 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestInternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#ALOuestDe"
+    "@id" : "http://purl.org/orl#ALOuestDe"
   }, {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansLaPartieSudDe",
+  "@id" : "http://purl.org/orl#DansLaPartieSudDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -1917,20 +1891,20 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthInternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#AuSudDe"
+    "@id" : "http://purl.org/orl#AuSudDe"
   }, {
-    "@id" : "http://www.purl.org/orl#DansPlanimetrique"
+    "@id" : "http://purl.org/orl#DansPlanimetrique"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DansPlanimetrique",
+  "@id" : "http://purl.org/orl#DansPlanimetrique",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "non, on est en forêt."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1941,18 +1915,18 @@
     "@value" : "Dans planimétrique"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeContact"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeContact"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DeAutreCoteDeXParRapportAY",
+  "@id" : "http://purl.org/orl#DeAutreCoteDeXParRapportAY",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Les rochers de l’homme, vous descendiez de l’autre côté plutôt ?"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1966,18 +1940,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeTernaire"
+    "@id" : "http://purl.org/orl#RelationSpatialeTernaire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#DuMemeCoteQueXParRapportAY",
+  "@id" : "http://purl.org/orl#DuMemeCoteQueXParRapportAY",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "c'est côté lac Robert"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1991,10 +1965,10 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeNonProjectionAxial"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeTernaire"
+    "@id" : "http://purl.org/orl#RelationSpatialeTernaire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#EntreJalonsXEtYSurItineraire",
+  "@id" : "http://purl.org/orl#EntreJalonsXEtYSurItineraire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -2004,14 +1978,14 @@
     "@value" : "La cible est située sur un itinéraire (une relation SitueSurItineraireOuReseauSupport peut être instanciée), X et Y sont deux jalons connus de cet itinéraire, et la cible est située sur la portion de cet itinéraire délimitée par X et Y."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#EntreXetY"
+    "@id" : "http://purl.org/orl#EntreXetY"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeItineraire"
+    "@id" : "http://purl.org/orl#RelationSpatialeItineraire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#EntreXEtYAvecDetours",
+  "@id" : "http://purl.org/orl#EntreXEtYAvecDetours",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -2024,12 +1998,12 @@
     "@value" : "Entre X et Y avec détours"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#EntreXetY"
+    "@id" : "http://purl.org/orl#EntreXetY"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#EntreXEtYEspaceIsotrope",
+  "@id" : "http://purl.org/orl#EntreXEtYEspaceIsotrope",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2040,18 +2014,18 @@
     "@value" : "Entre X et Y en espace isotrope"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#EntreXetY"
+    "@id" : "http://purl.org/orl#EntreXetY"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#EntreXetY",
+  "@id" : "http://purl.org/orl#EntreXetY",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Là on est dans le secteur entre… par les pistes forestières, entre cordéac et pellafol"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2065,12 +2039,12 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Distribution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeTernaire"
+    "@id" : "http://purl.org/orl#RelationSpatialeTernaire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#HorsDePlanimetrique",
+  "@id" : "http://purl.org/orl#HorsDePlanimetrique",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -2083,18 +2057,18 @@
     "@value" : "Hors de planimétrique"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDisjointe"
+    "@id" : "http://purl.org/orl#RelationSpatialeDisjointe"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#PresDe",
+  "@id" : "http://purl.org/orl#PresDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "vers midi, il était près du sommet et dans le brouillard"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2105,18 +2079,18 @@
     "@value" : "Près de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#Proximal",
+  "@id" : "http://purl.org/orl#Proximal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "Je suis sur un promontoire car le réseau ne passait pas."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2130,23 +2104,23 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#Proximal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeContact"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeContact"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeFonctionelle"
+    "@id" : "http://purl.org/orl#RelationSpatialeFonctionelle"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeProximité"
+    "@id" : "http://purl.org/orl#RelationSpatialeProximité"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationDeLocalisation",
+  "@id" : "http://purl.org/orl#RelationDeLocalisation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#abbreviation" : [ {
+  "http://purl.org/orl#abbreviation" : [ {
     "@language" : "en",
     "@value" : "l. r."
   }, {
     "@language" : "fr",
     "@value" : "r.l."
   } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2158,9 +2132,9 @@
     "@value" : "location relationship"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeDeCardinalité",
+  "@id" : "http://purl.org/orl#RelationSpatialeDeCardinalité",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2169,12 +2143,12 @@
     "@value" : "Relation spatiale de cardinalité"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection"
+    "@id" : "http://purl.org/orl#RelationSpatialeDeDirection"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeDeContact",
+  "@id" : "http://purl.org/orl#RelationSpatialeDeContact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2183,12 +2157,12 @@
     "@value" : "Relation spatiale de contact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative"
+    "@id" : "http://purl.org/orl#RelationSpatialePositionRelative"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeDeDirection",
+  "@id" : "http://purl.org/orl#RelationSpatialeDeDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2197,12 +2171,12 @@
     "@value" : "Relation spatiale de direction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative"
+    "@id" : "http://purl.org/orl#RelationSpatialePositionRelative"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeDisjointe",
+  "@id" : "http://purl.org/orl#RelationSpatialeDisjointe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2211,12 +2185,12 @@
     "@value" : "Relation spatiale disjointe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative"
+    "@id" : "http://purl.org/orl#RelationSpatialePositionRelative"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeFonctionelle",
+  "@id" : "http://purl.org/orl#RelationSpatialeFonctionelle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2228,12 +2202,12 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#FunctionalSpatialModality"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationDeLocalisation"
+    "@id" : "http://purl.org/orl#RelationDeLocalisation"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeItineraire",
+  "@id" : "http://purl.org/orl#RelationSpatialeItineraire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2242,12 +2216,12 @@
     "@value" : "Relation spatiale itinéraire"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative"
+    "@id" : "http://purl.org/orl#RelationSpatialePositionRelative"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative",
+  "@id" : "http://purl.org/orl#RelationSpatialePositionRelative",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2259,12 +2233,12 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#RelativeSpatialModality"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationDeLocalisation"
+    "@id" : "http://purl.org/orl#RelationDeLocalisation"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeProximité",
+  "@id" : "http://purl.org/orl#RelationSpatialeProximité",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2276,12 +2250,12 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SpatialDistanceModality"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationDeLocalisation"
+    "@id" : "http://purl.org/orl#RelationDeLocalisation"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeTernaire",
+  "@id" : "http://purl.org/orl#RelationSpatialeTernaire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2290,12 +2264,12 @@
     "@value" : "Relation spatiale ternaire"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative"
+    "@id" : "http://purl.org/orl#RelationSpatialePositionRelative"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale",
+  "@id" : "http://purl.org/orl#RelationSpatialeVerticale",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
@@ -2304,12 +2278,12 @@
     "@value" : "Relation spatiale verticale"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialePositionRelative"
+    "@id" : "http://purl.org/orl#RelationSpatialePositionRelative"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#SiteVoitCible",
+  "@id" : "http://purl.org/orl#SiteVoitCible",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -2322,18 +2296,18 @@
     "@value" : "Site voit Cible"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationDeLocalisation"
+    "@id" : "http://purl.org/orl#RelationDeLocalisation"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#SitueSurItineraireOuReseauSupport",
+  "@id" : "http://purl.org/orl#SitueSurItineraireOuReseauSupport",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "On est sur le GR 54."
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2347,14 +2321,14 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#PathRepresentingInternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeFonctionelle"
+    "@id" : "http://purl.org/orl#RelationSpatialeFonctionelle"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeItineraire"
+    "@id" : "http://purl.org/orl#RelationSpatialeItineraire"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#SousALAplombDe",
+  "@id" : "http://purl.org/orl#SousALAplombDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
+  "http://purl.org/orl#atAbstractClass" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
@@ -2370,18 +2344,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#SousAltitude",
+  "@id" : "http://purl.org/orl#SousAltitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "je pense pas qu'ils soient passés par les vires en-dessous"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2395,18 +2369,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#SousJalonSurItineraire",
+  "@id" : "http://purl.org/orl#SousJalonSurItineraire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "on est sous le déversoir du lac de belledonne"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2420,20 +2394,20 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeItineraire"
+    "@id" : "http://purl.org/orl#RelationSpatialeItineraire"
   }, {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#SousProcheDe",
+  "@id" : "http://purl.org/orl#SousProcheDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "On est à 100 m ou 150, ou 200 m du col, vraiment juste en-dessous"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2447,18 +2421,18 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#SousRecouvertPar",
+  "@id" : "http://purl.org/orl#SousRecouvertPar",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/orl#atAbstractClass" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "fr",
     "@value" : "avec un mec coincé sous un arbre"
-  } ],
-  "http://www.purl.org/orl#atAbstractClass" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2472,13 +2446,13 @@
     "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#BelowProjectionExternal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.purl.org/orl#RelationSpatialeVerticale"
+    "@id" : "http://purl.org/orl#RelationSpatialeVerticale"
   } ]
 }, {
-  "@id" : "http://www.purl.org/orl#abbreviation",
+  "@id" : "http://purl.org/orl#abbreviation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.purl.org/orl#atAbstractClass",
+  "@id" : "http://purl.org/orl#atAbstractClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2491,11 +2465,44 @@
     "@value" : "Précise si la classe est abstraite (Vrai) ou non (Faux)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.purl.org/orl#RelationDeLocalisation"
+    "@id" : "http://purl.org/orl#RelationDeLocalisation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/#preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/#preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#East",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#EastExternal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#North",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#NorthExternal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#South",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#SouthExternal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#West",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontospace.uni-bremen.de/ontology/stable/GUM-3-space.owl#WestExternal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -2504,8 +2511,5 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://vocab.org/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]
